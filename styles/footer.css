@@ -4,3 +4,32 @@
   text-decoration: underline solid;
   text-decoration-thickness: 2px;
 }
+
+/*** Common browsers ***/
+.Footer-Text::selection {
+  background-color: #404040;
+  color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+.Footer-Text::-moz-selection {
+  background-color: #404040;
+  color: #fff;
+}
+
+/***For Other Browsers ***/
+.Footer-Text::-o-selection {
+  background-color: #404040;
+  color: #fff;
+}
+
+.Footer-Text::-ms-selection {
+  background-color: #404040;
+  color: #fff;
+}
+
+/*** For Webkit ***/
+.Footer-Text::-webkit-selection {
+  background-color: #404040;
+  color: #fff;
+}

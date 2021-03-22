@@ -1,34 +1,36 @@
 /*** Navbar ***/
 
-.nav {
-  position: relative;
+.SiteHeader {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-.Navbar-Content:hover {
+.Navbar-Text:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
 
 /*** Common browsers ***/
-.Navbar-Content::selection {
+.Navbar-Text::selection {
   background-color: transparent;
 }
 
 /*** Mozilla based browsers ***/
-.Navbar-Content::-moz-selection {
+.Navbar-Text::-moz-selection {
   background-color: transparent;
 }
 
 /***For Other Browsers ***/
-.Navbar-Content::-o-selection {
+.Navbar-Text::-o-selection {
   background-color: transparent;
 }
 
-.Navbar-Content::-ms-selection {
+.Navbar-Text::-ms-selection {
   background-color: transparent;
 }
 
 /*** For Webkit ***/
-.Navbar-Content::-webkit-selection {
+.Navbar-Text::-webkit-selection {
   background-color: transparent;
 }

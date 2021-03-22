@@ -17,30 +17,30 @@
 }
 
 /*** Common browsers ***/
-.Hero-Content::selection {
+.Hero-Text::selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /*** Mozilla based browsers ***/
-.Hero-Content::-moz-selection {
+.Hero-Text::-moz-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /***For Other Browsers ***/
-.Hero-Content::-o-selection {
+.Hero-Text::-o-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
-.Hero-Content::-ms-selection {
+.Hero-Text::-ms-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /*** For Webkit ***/
-.Hero-Content::-webkit-selection {
+.Hero-Text-::-webkit-selection {
   background-color: #404040;
   color: #ffd1dc;
 }

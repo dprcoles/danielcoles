@@ -2,6 +2,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('ttf');
+}
+
+.main-content {
+  position: relative;
+  z-index: -1;
+}
+
 @import 'aboutme.css';
 @import 'footer.css';
 @import 'hero.css';
