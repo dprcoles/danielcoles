@@ -1,0 +1,32 @@
+
+{
+  "learning": [
+    {
+      "name": "Docker",
+      "logo": "",
+      "short": ""
+    },
+    {
+      "name": "Go",
+      "logo": "",
+      "short": ""
+    },
+    {
+      "name": "Kubernetes",
+      "logo": "",
+      "short": ""
+    }
+  ],
+  "hobbies": [
+    {
+      "hobby": "Gaming",
+      "image": "",
+      "summary": ""
+    },
+    {
+      "hobby": "Music",
+      "image": "",
+      "summary": ""
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+/*** Navbar ***/
+
+.nav {
+  position: relative;
+}
+
+.Navbar-Content:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+/*** Common browsers ***/
+.Navbar-Content::selection {
+  background-color: transparent;
+}
+
+/*** Mozilla based browsers ***/
+.Navbar-Content::-moz-selection {
+  background-color: transparent;
+}
+
+/***For Other Browsers ***/
+.Navbar-Content::-o-selection {
+  background-color: transparent;
+}
+
+.Navbar-Content::-ms-selection {
+  background-color: transparent;
+}
+
+/*** For Webkit ***/
+.Navbar-Content::-webkit-selection {
+  background-color: transparent;
+}

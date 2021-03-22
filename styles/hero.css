@@ -1,0 +1,46 @@
+/*** Hero ***/
+
+.Hero::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffd1dc;
+  z-index: -1;
+}
+
+.screen-log {
+  display: none;
+}
+
+/*** Common browsers ***/
+.Hero-Content::selection {
+  background-color: #404040;
+  color: #ffd1dc;
+}
+
+/*** Mozilla based browsers ***/
+.Hero-Content::-moz-selection {
+  background-color: #404040;
+  color: #ffd1dc;
+}
+
+/***For Other Browsers ***/
+.Hero-Content::-o-selection {
+  background-color: #404040;
+  color: #ffd1dc;
+}
+
+.Hero-Content::-ms-selection {
+  background-color: #404040;
+  color: #ffd1dc;
+}
+
+/*** For Webkit ***/
+.Hero-Content::-webkit-selection {
+  background-color: #404040;
+  color: #ffd1dc;
+}
