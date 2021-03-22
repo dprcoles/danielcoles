@@ -30,9 +30,8 @@ export default function Home({ indexInfo, footerInfo }) {
           }}
         />
       </Head>
-
-      <main>
-        <Navbar />
+      <Navbar />
+      <main tabIndex='-1' className='main-content'>
         <Hero
           firstName={data.firstName}
           lastName={data.lastName}
