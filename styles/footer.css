@@ -1,35 +1,35 @@
 /*** Footer ***/
 
-.Footer-Link {
+.Footer__Link {
   text-decoration: underline solid;
   text-decoration-thickness: 2px;
 }
 
 /*** Common browsers ***/
-.Footer-Text::selection {
+.Footer__Text::selection {
   background-color: #404040;
   color: #fff;
 }
 
 /*** Mozilla based browsers ***/
-.Footer-Text::-moz-selection {
+.Footer__Text::-moz-selection {
   background-color: #404040;
   color: #fff;
 }
 
 /***For Other Browsers ***/
-.Footer-Text::-o-selection {
+.Footer__Text::-o-selection {
   background-color: #404040;
   color: #fff;
 }
 
-.Footer-Text::-ms-selection {
+.Footer__Text::-ms-selection {
   background-color: #404040;
   color: #fff;
 }
 
 /*** For Webkit ***/
-.Footer-Text::-webkit-selection {
+.Footer__Text::-webkit-selection {
   background-color: #404040;
   color: #fff;
 }

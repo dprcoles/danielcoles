@@ -7,8 +7,9 @@ import Hero from '../components/index/hero'
 import AboutMe from '../components/index/aboutme'
 import Footer from '../components/index/footer'
 
-export default function Home({ indexInfo, footerInfo }) {
+export default function Home({ indexInfo, aboutMeInfo, footerInfo }) {
   const data = JSON.parse(indexInfo)
+  const aboutMeData = JSON.parse(aboutMeInfo)
   const footerData = JSON.parse(footerInfo)
 
   return (
@@ -37,7 +38,12 @@ export default function Home({ indexInfo, footerInfo }) {
           lastName={data.lastName}
           jobTitle={data.jobTitle}
         />
-        <AboutMe />
+        <AboutMe
+          data={aboutMeData}
+          firstName={data.firstName}
+          jobTitle={data.jobTitle}
+          employer={data.employer}
+        />
       </main>
       <Footer data={footerData} />
     </div>
@@ -46,6 +52,9 @@ export default function Home({ indexInfo, footerInfo }) {
 
 export const getStaticProps = async () => {
   const indexInfo = fs.readFileSync(path.join('info', 'index.json')).toString()
+  const aboutMeInfo = fs
+    .readFileSync(path.join('info', 'aboutme.json'))
+    .toString()
   const footerInfo = fs
     .readFileSync(path.join('info', 'footer.json'))
     .toString()
@@ -53,6 +62,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       indexInfo,
+      aboutMeInfo,
       footerInfo,
     },
   }
