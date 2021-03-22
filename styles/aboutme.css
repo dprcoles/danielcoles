@@ -1,0 +1,30 @@
+/*** AboutMe ***/
+
+/*** Common browsers ***/
+.AboutMe-Content::selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** Mozilla based browsers ***/
+.AboutMe-Content::-moz-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/***For Other Browsers ***/
+.AboutMe-Content::-o-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+.AboutMe-Content::-ms-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** For Webkit ***/
+.AboutMe-Content::-webkit-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}

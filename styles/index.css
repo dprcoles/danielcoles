@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'aboutme.css';
+@import 'footer.css';
+@import 'hero.css';
+@import 'navbar.css';

@@ -1,65 +1,60 @@
+import React from 'react'
+import fs from 'fs'
+import path from 'path'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Navbar from '../components/index/navbar'
+import Hero from '../components/index/hero'
+import AboutMe from '../components/index/aboutme'
+import Footer from '../components/index/footer'
 
-export default function Home() {
+export default function Home({ indexInfo, footerInfo }) {
+  const data = JSON.parse(indexInfo)
+  const footerData = JSON.parse(footerInfo)
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          {data.fullName} | {data.jobTitle}
+        </title>
+        <link rel='icon' href='/logo.svg' />
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-434SZPP6T5'
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-434SZPP6T5');;`,
+          }}
+        />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <main>
+        <Navbar />
+        <Hero
+          firstName={data.firstName}
+          lastName={data.lastName}
+          jobTitle={data.jobTitle}
+        />
+        <AboutMe />
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer data={footerData} />
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const indexInfo = fs.readFileSync(path.join('info', 'index.json')).toString()
+  const footerInfo = fs
+    .readFileSync(path.join('info', 'footer.json'))
+    .toString()
+
+  return {
+    props: {
+      indexInfo,
+      footerInfo,
+    },
+  }
 }
