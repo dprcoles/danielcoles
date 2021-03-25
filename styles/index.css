@@ -7,12 +7,13 @@
   src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('ttf');
 }
 
-.main-content {
+.First-Section {
   position: relative;
   z-index: -1;
 }
 
 @import 'aboutme.css';
+@import 'spotify.css';
 @import 'footer.css';
 @import 'hero.css';
 @import 'navbar.css';

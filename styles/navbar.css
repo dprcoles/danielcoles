@@ -6,31 +6,31 @@
   right: 0;
 }
 
-.Navbar-Text:hover {
+.Navbar__Text:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
 
 /*** Common browsers ***/
-.Navbar-Text::selection {
+.Navbar__Text::selection {
   background-color: transparent;
 }
 
 /*** Mozilla based browsers ***/
-.Navbar-Text::-moz-selection {
+.Navbar__Text::-moz-selection {
   background-color: transparent;
 }
 
 /***For Other Browsers ***/
-.Navbar-Text::-o-selection {
+.Navbar__Text::-o-selection {
   background-color: transparent;
 }
 
-.Navbar-Text::-ms-selection {
+.Navbar__Text::-ms-selection {
   background-color: transparent;
 }
 
 /*** For Webkit ***/
-.Navbar-Text::-webkit-selection {
+.Navbar__Text::-webkit-selection {
   background-color: transparent;
 }

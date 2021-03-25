@@ -9,38 +9,38 @@
   right: 0;
   bottom: 0;
   background-color: #ffd1dc;
-  z-index: -1;
+  z-index: -2;
 }
 
-.screen-log {
+.ScreenLogger {
   display: none;
 }
 
 /*** Common browsers ***/
-.Hero-Text::selection {
+.Hero__Text::selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /*** Mozilla based browsers ***/
-.Hero-Text::-moz-selection {
+.Hero__Text::-moz-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /***For Other Browsers ***/
-.Hero-Text::-o-selection {
+.Hero__Text::-o-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
-.Hero-Text::-ms-selection {
+.Hero__Text::-ms-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
 
 /*** For Webkit ***/
-.Hero-Text-::-webkit-selection {
+.Hero__-Text-::-webkit-selection {
   background-color: #404040;
   color: #ffd1dc;
 }
