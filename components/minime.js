@@ -103,8 +103,9 @@ export default function minime() {
       <svg
         width='100%'
         height='100%'
-        viewBox='0 0 1189 1024'
+        viewBox='0 0 1289 1124'
         fill='none'
+        className='p-2'
         xmlns='http://www.w3.org/2000/svg'
       >
         <clipPath id='BackgroundClip'>
@@ -124,7 +125,7 @@ export default function minime() {
             d='M429.567 290.039C420.723 352.221 435.095 426.493 443.386 455.857H783.325C790.695 414.402 803.224 325.275 794.38 300.403C785.536 275.53 772.27 272.766 766.742 274.494C658.036 253.767 438.411 227.858 429.567 290.039Z'
             fill='#B5AA9A'
           />
-          <g className='[ Me ]' filter='url(#filter0_d)'>
+          <g className='[ Me ]'>
             <g className='[ Ear ][ Right__Ear ]'>
               <path
                 id='Vector'
