@@ -13,8 +13,8 @@ module.exports = {
         'pastel-green': '#77DD77',
       },
       fontFamily: {
-        roboto: ['Roboto'],
-        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+        roboto: ['robotoregular'],
+        sans: ['robotoregular', ...defaultTheme.fontFamily.sans],
       },
     },
   },

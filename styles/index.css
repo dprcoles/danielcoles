@@ -3,8 +3,11 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('ttf');
+  font-family: 'robotoregular';
+  src: url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('./fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
 }
 
 .First-Section {
