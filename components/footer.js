@@ -55,27 +55,42 @@ export default function footer({ data }) {
           <div className='grid grid-flow-row grid-cols-5 grid-rows-1'>
             <div className='[ Socials ][ Mail ] self-center justify-self-center'>
               <a href={data.socials.mail}>
-                <FaEnvelopeOpen className='hover:text-red-400' />
+                <FaEnvelopeOpen
+                  className='hover:text-red-400'
+                  title='Get in touch by Email'
+                />
               </a>
             </div>
             <div className='[ Socials ][ Spotify ] self-center justify-self-center'>
               <a href={data.socials.spotify} target='_blank'>
-                <FaSpotify className='hover:text-green-500' />
+                <FaSpotify
+                  className='hover:text-green-500'
+                  title='Follow me on Spotify'
+                />
               </a>
             </div>
             <div className='[ Socials ][ GitHub ] self-center justify-self-center'>
               <a href={data.socials.github} target='_blank'>
-                <FaGithub className='hover:text-gray-900' />
+                <FaGithub
+                  className='hover:text-gray-900'
+                  title='Check out my GitHub'
+                />
               </a>
             </div>
             <div className='[ Socials ][ LinkedIn ] self-center justify-self-center'>
               <a href={data.socials.linkedin} target='_blank'>
-                <FaLinkedinIn className='hover:text-blue-800' />
+                <FaLinkedinIn
+                  className='hover:text-blue-800'
+                  title='Follow me on LinkedIn'
+                />
               </a>
             </div>
             <div className='[ Socials ][ Twitter ] self-center justify-self-center'>
               <a href={data.socials.twitter} target='_blank'>
-                <FaTwitter className='hover:text-blue-500' />
+                <FaTwitter
+                  className='hover:text-blue-500'
+                  title='Follow me on Twitter'
+                />
               </a>
             </div>
           </div>

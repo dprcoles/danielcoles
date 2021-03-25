@@ -1,5 +1,14 @@
 import React from 'react'
+import Navbar from '../components/navbar'
+import Projects from '../components/projects/projects'
 
 export default function projects() {
-  return <div></div>
+  return (
+    <>
+      <Navbar />
+      <div class='container'>
+        <Projects />
+      </div>
+    </>
+  )
 }

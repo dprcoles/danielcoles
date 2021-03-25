@@ -1,0 +1,59 @@
+/*** Spotify ***/
+
+/*** Common browsers ***/
+.CurrentlyPlaying__Text::selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** Mozilla based browsers ***/
+.CurrentlyPlaying__Text::-moz-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/***For Other Browsers ***/
+.CurrentlyPlaying__Text::-o-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+.CurrentlyPlaying__Text::-ms-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** For Webkit ***/
+.CurrentlyPlaying__Text::-webkit-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** Common browsers ***/
+.TopTracks__Text::selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** Mozilla based browsers ***/
+.TopTracks__Text::-moz-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/***For Other Browsers ***/
+.TopTracks__Text::-o-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+.TopTracks__Text::-ms-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}
+
+/*** For Webkit ***/
+.TopTracks__Text::-webkit-selection {
+  background-color: #404040;
+  color: #a7c7e7;
+}

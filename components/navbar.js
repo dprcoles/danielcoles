@@ -18,7 +18,7 @@ export default function navbar() {
         <ul className='flex flex-row'>
           <li className='[ Navbar__Item ][ Dashboard__Link ] pr-4 pl-4 self-center text-center'>
             <a
-              href='/dashboard'
+              // href='/dashboard'
               className='[ Navbar__Text ] text-lg font-roboto font-bold'
             >
               Dashboard
@@ -26,7 +26,7 @@ export default function navbar() {
           </li>
           <li className='[ Navbar__Item ][ Projects__Link ] pr-4 pl-4 self-center text-center'>
             <a
-              href='/projects'
+              // href='/projects'
               className='[ Navbar__Text ] text-lg font-roboto font-bold'
             >
               Projects
@@ -34,7 +34,7 @@ export default function navbar() {
           </li>
           <li className='[ Navbar__Item ][ Experience__Link ] pr-4 pl-4 self-center text-center'>
             <a
-              href='/experience'
+              // href='/experience'
               className='[ Navbar__Text ] text-lg font-roboto font-bold'
             >
               Experience
@@ -42,7 +42,7 @@ export default function navbar() {
           </li>
           <li className='[ Navbar__Item ][ Tech__Link ] pr-4 pl-4 self-center text-center'>
             <a
-              href='/tech'
+              // href='/tech'
               className='[ Navbar__Text ] text-lg font-roboto font-bold'
             >
               Tech

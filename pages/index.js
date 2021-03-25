@@ -2,10 +2,10 @@ import React from 'react'
 import fs from 'fs'
 import path from 'path'
 import Head from 'next/head'
-import Navbar from '../components/index/navbar'
-import Hero from '../components/index/hero'
-import AboutMe from '../components/index/aboutme'
-import Footer from '../components/index/footer'
+import Navbar from '../components/navbar'
+import Hero from '../components/hero'
+import AboutMe from '../components/aboutme'
+import Footer from '../components/footer'
 
 export default function Home({ indexInfo, aboutMeInfo, footerInfo }) {
   const data = JSON.parse(indexInfo)
@@ -32,12 +32,14 @@ export default function Home({ indexInfo, aboutMeInfo, footerInfo }) {
         />
       </Head>
       <Navbar />
-      <main tabIndex='-1' className='main-content'>
-        <Hero
-          firstName={data.firstName}
-          lastName={data.lastName}
-          jobTitle={data.jobTitle}
-        />
+      <main className='[ Main-Content ]'>
+        <div className='[ First-Section ]'>
+          <Hero
+            firstName={data.firstName}
+            lastName={data.lastName}
+            jobTitle={data.jobTitle}
+          />
+        </div>
         <AboutMe
           data={aboutMeData}
           firstName={data.firstName}
