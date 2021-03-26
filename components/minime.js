@@ -234,7 +234,7 @@ export default function minime() {
                   className='[ Eyebrow__Right ]'
                   d='M701.318 398.004C695.354 392.699 688.241 388.891 680.554 386.889C672.617 385.213 664.412 385.335 656.526 387.245'
                   stroke='#B5AA9A'
-                  strokeWidth='2'
+                  strokeWidth='4'
                   strokeLinecap='round'
                   strokeLinejoin='round'
                 />
@@ -242,7 +242,7 @@ export default function minime() {
                   className='[ Eyebrow__Left ]'
                   d='M569.927 390.888C562.353 388.742 554.404 388.314 546.648 389.634C538.726 391.207 531.203 394.398 524.539 399.013'
                   stroke='#B5AA9A'
-                  strokeWidth='2'
+                  strokeWidth='4'
                   strokeLinecap='round'
                   strokeLinejoin='round'
                 />
@@ -250,7 +250,7 @@ export default function minime() {
                   className='[ Mouth ]'
                   d='M568.973 556.768C568.973 556.768 609.167 582.184 647.765 564.103'
                   stroke='#B5AA9A'
-                  strokeWidth='2'
+                  strokeWidth='4'
                   strokeLinecap='round'
                   strokeLinejoin='round'
                 />
@@ -270,7 +270,7 @@ export default function minime() {
                   className='nose'
                   d='M599.389 502.494C599.389 502.494 616.742 511.311 631.848 502.494'
                   stroke='#E0D5C1'
-                  strokeWidth='2'
+                  strokeWidth='4'
                   strokeLinecap='round'
                   strokeLinejoin='round'
                 />
