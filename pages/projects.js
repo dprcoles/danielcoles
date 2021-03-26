@@ -1,13 +1,10 @@
-import Navbar from '../components/navbar'
+import Wrapper from '../components/wrapper/wrapper'
 import Projects from '../components/projects/projects'
 
 export default function projects() {
   return (
-    <>
-      <Navbar />
-      <div class='container'>
-        <Projects />
-      </div>
-    </>
+    <Wrapper title='Daniel Coles | Projects'>
+      <Projects />
+    </Wrapper>
   )
 }
