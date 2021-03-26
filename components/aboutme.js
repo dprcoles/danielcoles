@@ -1,9 +1,7 @@
-import React from 'react'
 import CurrentlyPlaying from './spotify/currentlyPlaying'
 import TopTracks from './spotify/topTracks'
 
-export default function aboutme({ data, firstName, jobTitle, employer }) {
-  const games = data.games
+export default function aboutme({ data, firstName, employer, jobTitle }) {
   return (
     <section className='[ AboutMe ] bg-pastel-blue'>
       <div className='container mx-auto p-5 text-dc-grey'>
@@ -24,7 +22,7 @@ export default function aboutme({ data, firstName, jobTitle, employer }) {
               {data.interests}
             </p>
             <p className='[ AboutMe__Text ][ Hobbies ] font-bold text-lg text-left py-2'>
-              {data.hobbies} {games.join(', ')}.
+              {data.hobbies} {data.games.join(', ')}.
             </p>
             <p className='[ AboutMe__Text ][ Location ] font-bold text-lg text-left py-2'>
               {data.location}

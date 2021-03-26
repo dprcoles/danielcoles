@@ -1,4 +1,3 @@
-import React from 'react'
 import Minime from './minime'
 
 export default function hero({ firstName, lastName, jobTitle }) {

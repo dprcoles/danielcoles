@@ -1,5 +1,12 @@
-import React from 'react'
+import Wrapper from '../components/wrapper/wrapper'
+import Experience from '../components/experience/experience'
 
 export default function experience() {
-  return <div></div>
+  return (
+    <Wrapper title='Daniel Coles | Experience'>
+      <div className='py-36'>
+        <Experience />
+      </div>
+    </Wrapper>
+  )
 }

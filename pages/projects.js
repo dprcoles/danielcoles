@@ -1,14 +1,12 @@
-import React from 'react'
-import Navbar from '../components/navbar'
+import Wrapper from '../components/wrapper/wrapper'
 import Projects from '../components/projects/projects'
 
 export default function projects() {
   return (
-    <>
-      <Navbar />
-      <div class='container'>
+    <Wrapper title='Daniel Coles | Projects'>
+      <div className='py-36'>
         <Projects />
       </div>
-    </>
+    </Wrapper>
   )
 }
