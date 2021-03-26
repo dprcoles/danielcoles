@@ -21,6 +21,13 @@ export default function Wrapper(props) {
           type='font/woff2'
           crossOrigin
         />
+        <link
+          rel='preload'
+          href='/fonts/roboto-medium-webfont.woff'
+          as='font'
+          type='font/woff'
+          crossOrigin
+        />
         <link rel='icon' href='/logo.svg' />
         <title>{meta.title}</title>
         <meta property='og:type' content={meta.type} />
