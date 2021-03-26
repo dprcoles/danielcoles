@@ -34,6 +34,7 @@ export default function Wrapper(props) {
         <meta property='og:site_name' content='Daniel Coles' />
         <meta property='og:title' content={meta.title} />
         <meta property='og:description' content={meta.description} />
+        <meta property='description' content={meta.description} />
         <meta property='og:image' content={meta.image} />
         <meta name='twitter:site' content='@_danielcoles' />
         <meta name='twitter:title' content={meta.title} />
