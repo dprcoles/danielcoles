@@ -5,7 +5,6 @@ import fetcher from '../../utils/fetcher'
 
 export default function CurrentlyPlaying() {
   const { data } = useSWR('/api/getCurrentlyPlaying', fetcher)
-  console.log(data)
 
   return (
     <div className='[ Spotify ][ CurrentlyPlaying ] p-4 font-roboto'>
@@ -35,8 +34,9 @@ export default function CurrentlyPlaying() {
               href={data.trackUrl}
               target='_blank'
               title='Click to view song on Spotify'
+              rel='noreferrer'
             >
-              <FaExternalLinkAlt size='large' className='p-8 self-center' />
+              <FaExternalLinkAlt size='100%' className='p-8 self-center' />
             </a>
           </div>
         ) : (

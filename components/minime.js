@@ -1,4 +1,3 @@
-import React from 'react'
 import gsap from 'gsap'
 
 export default function minime() {
@@ -307,7 +306,7 @@ export default function minime() {
             filterUnits='userSpaceOnUse'
             colorInterpolationFilters='sRGB'
           >
-            <feFlood flood-opacity='0' result='BackgroundImageFix' />
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
               in='SourceAlpha'
               type='matrix'
@@ -339,12 +338,12 @@ export default function minime() {
             y2='245.293'
             gradientUnits='userSpaceOnUse'
           >
-            <stop offset='0.0885417' stop-color='#FAF0C8' />
-            <stop offset='0.307292' stop-color='#C2B599' />
-            <stop offset='0.494792' stop-color='#998977' />
-            <stop offset='0.671875' stop-color='#806F62' />
-            <stop offset='0.833333' stop-color='#77655A' />
-            <stop offset='1' stop-color='#77655A' />
+            <stop offset='0.0885417' stopColor='#FAF0C8' />
+            <stop offset='0.307292' stopColor='#C2B599' />
+            <stop offset='0.494792' stopColor='#998977' />
+            <stop offset='0.671875' stopColor='#806F62' />
+            <stop offset='0.833333' stopColor='#77655A' />
+            <stop offset='1' stopColor='#77655A' />
           </linearGradient>
         </defs>
       </svg>

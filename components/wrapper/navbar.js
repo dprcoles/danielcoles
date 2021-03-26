@@ -1,4 +1,4 @@
-import React from 'react'
+import NextLink from 'next/link'
 
 export default function navbar() {
   return (
@@ -17,36 +17,32 @@ export default function navbar() {
         </div>
         <ul className='flex flex-row'>
           <li className='[ Navbar__Item ][ Dashboard__Link ] pr-4 pl-4 self-center text-center'>
-            <a
-              // href='/dashboard'
-              className='[ Navbar__Text ] text-lg font-roboto font-bold'
-            >
-              Dashboard
-            </a>
+            <NextLink href='/dashboard'>
+              <a className='[ Navbar__Text ] text-lg font-roboto font-bold'>
+                Dashboard
+              </a>
+            </NextLink>
           </li>
           <li className='[ Navbar__Item ][ Projects__Link ] pr-4 pl-4 self-center text-center'>
-            <a
-              // href='/projects'
-              className='[ Navbar__Text ] text-lg font-roboto font-bold'
-            >
-              Projects
-            </a>
+            <NextLink href='/projects'>
+              <a className='[ Navbar__Text ] text-lg font-roboto font-bold'>
+                Projects
+              </a>
+            </NextLink>
           </li>
           <li className='[ Navbar__Item ][ Experience__Link ] pr-4 pl-4 self-center text-center'>
-            <a
-              // href='/experience'
-              className='[ Navbar__Text ] text-lg font-roboto font-bold'
-            >
-              Experience
-            </a>
+            <NextLink href='/experience'>
+              <a className='[ Navbar__Text ] text-lg font-roboto font-bold'>
+                Experience
+              </a>
+            </NextLink>
           </li>
           <li className='[ Navbar__Item ][ Tech__Link ] pr-4 pl-4 self-center text-center'>
-            <a
-              // href='/tech'
-              className='[ Navbar__Text ] text-lg font-roboto font-bold'
-            >
-              Tech
-            </a>
+            <NextLink href='/tech'>
+              <a className='[ Navbar__Text ] text-lg font-roboto font-bold'>
+                Tech
+              </a>
+            </NextLink>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,4 @@
 import useSWR from 'swr'
-import { FaExternalLinkAlt } from 'react-icons/fa'
 import fetcher from '../../utils/fetcher'
 
 export default function NowPlaying() {
