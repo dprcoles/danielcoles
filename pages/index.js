@@ -6,23 +6,21 @@ import AboutMe from '../components/aboutme'
 
 export default function Home({ data, aboutmeData }) {
   return (
-    <div>
-      <Wrapper title={`${data.fullName} | ${data.jobTitle}`}>
-        <div className='[ First-Section ]'>
-          <Hero
-            firstName={data.firstName}
-            lastName={data.lastName}
-            jobTitle={data.jobTitle}
-          />
-        </div>
-        <AboutMe
-          data={aboutmeData}
+    <Wrapper title={`${data.fullName} | ${data.jobTitle}`}>
+      <div className='[ First-Section ]'>
+        <Hero
           firstName={data.firstName}
           lastName={data.lastName}
           jobTitle={data.jobTitle}
         />
-      </Wrapper>
-    </div>
+      </div>
+      <AboutMe
+        data={aboutmeData}
+        firstName={data.firstName}
+        lastName={data.lastName}
+        jobTitle={data.jobTitle}
+      />
+    </Wrapper>
   )
 }
 

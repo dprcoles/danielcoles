@@ -3,8 +3,12 @@ import Dashboard from '../components/dashboard/dashboard'
 
 export default function dashboard() {
   return (
-    <Wrapper title='Daniel Coles | Dashboard'>
-      <Dashboard />
-    </Wrapper>
+    <div>
+      <Wrapper title='Daniel Coles | Dashboard'>
+        <div className='py-36'>
+          <Dashboard />
+        </div>
+      </Wrapper>
+    </div>
   )
 }
