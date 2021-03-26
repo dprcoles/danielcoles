@@ -14,7 +14,6 @@ export default function Wrapper(props) {
   return (
     <div>
       <Head>
-        <meta name='robots' content='follow, index' />
         <link
           rel='preload'
           href='/fonts/roboto-medium-webfont.woff2'
