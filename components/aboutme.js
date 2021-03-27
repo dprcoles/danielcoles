@@ -8,7 +8,7 @@ export default function aboutme({ data, firstName, employer, jobTitle }) {
         <div className='[ AboutMe__Title ][ AboutMe__Text ] font-roboto font-extrabold text-7xl text-left py-10'>
           About Me
         </div>
-        <div className='font-roboto relative grid grid-flow-row grid-cols-2 grid-rows-1 p-4 space-x-4 space-y-4'>
+        <div className='font-roboto relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4'>
           <div className='[ AboutMe__Article ][ Intro ] p-4 col-start-1 col-end-1'>
             <div className='[ AboutMe__Text ][ Heading ] text-2xl font-extrabold text-left pb-4'>
               Who am I?
@@ -29,7 +29,7 @@ export default function aboutme({ data, firstName, employer, jobTitle }) {
             </p>
           </div>
         </div>
-        <div className='font-roboto relative grid grid-flow-row grid-cols-2 grid-rows-1 p-4 space-x-4 space-y-4'>
+        <div className='font-roboto relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4'>
           <div className='[ AboutMe__Article ][ Music ] p-4 col-start-2 col-end-2'>
             <div className='[ AboutMe__Text ][ Heading ] text-2xl font-extrabold text-left pb-4'>
               Music!

@@ -2,8 +2,8 @@ import Minime from './minime'
 
 export default function hero({ firstName, lastName, jobTitle }) {
   return (
-    <header className='[ Hero ] container mx-auto text-dc-grey'>
-      <div className='grid grid-flow-row grid-cols-2 grid-rows-1 gap-4'>
+    <header className='[ Hero ] container mx-auto text-dc-grey md:pt-16 pt-8'>
+      <div className='grid grid-flow-row grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-4 md:p-8 p-4'>
         <div className='[ Hero__Me ] self-center'>
           <Minime />
         </div>
