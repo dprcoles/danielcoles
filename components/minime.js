@@ -104,7 +104,7 @@ export default function minime() {
         height='100%'
         viewBox='0 0 1289 1124'
         fill='none'
-        className='p-2'
+        className='md:p-2'
         xmlns='http://www.w3.org/2000/svg'
       >
         <clipPath id='BackgroundClip'>
