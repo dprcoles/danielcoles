@@ -12,23 +12,8 @@ export default function Wrapper(props) {
   }
 
   return (
-    <html lang='en'>
+    <div>
       <Head>
-        <link
-          rel='preload'
-          href='/fonts/roboto-medium-webfont.woff2'
-          as='font'
-          type='font/woff2'
-          crossOrigin='true'
-        />
-        <link
-          rel='preload'
-          href='/fonts/roboto-medium-webfont.woff'
-          as='font'
-          type='font/woff'
-          crossOrigin='true'
-        />
-        <link rel='icon' href='/logo.svg' />
         <title>{meta.title}</title>
         <meta name='description' content={meta.description} />
         <meta property='og:type' content={meta.type} />
@@ -40,21 +25,10 @@ export default function Wrapper(props) {
         <meta name='twitter:title' content={meta.title} />
         <meta name='twitter:description' content={meta.description} />
         <meta name='twitter:image' content={meta.image} />
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-434SZPP6T5'
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-434SZPP6T5');;`,
-          }}
-        />
       </Head>
       <Navbar />
       <main className='[ Main-Content ]'>{children}</main>
       <Footer />
-    </html>
+    </div>
   )
 }
