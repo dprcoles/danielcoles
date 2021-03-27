@@ -12,7 +12,7 @@ export default function Wrapper(props) {
   }
 
   return (
-    <div>
+    <html lang='en'>
       <Head>
         <link
           rel='preload'
@@ -55,6 +55,6 @@ export default function Wrapper(props) {
       <Navbar />
       <main className='[ Main-Content ]'>{children}</main>
       <Footer />
-    </div>
+    </html>
   )
 }
