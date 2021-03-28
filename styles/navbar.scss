@@ -6,6 +6,10 @@
   right: 0;
 }
 
+.active {
+  display: block;
+}
+
 .Navbar__Text:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
