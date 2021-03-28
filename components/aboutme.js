@@ -3,8 +3,8 @@ import TopTracks from './spotify/topTracks'
 
 export default function aboutme({ data, firstName, employer, jobTitle }) {
   return (
-    <section className='[ AboutMe ] bg-pastel-blue'>
-      <div className='container mx-auto p-5 text-dc-grey'>
+    <section className='[ AboutMe ] bg-pastel-blue dark:bg-dark-pastel-blue'>
+      <div className='container mx-auto p-5 text-dc-grey dark:text-white'>
         <div className='[ AboutMe__Title ][ AboutMe__Text ] font-roboto font-extrabold text-7xl text-left py-10'>
           About Me
         </div>

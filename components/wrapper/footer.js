@@ -10,13 +10,13 @@ import { footerData } from './footerData'
 export default function footer() {
   return (
     <footer className='[ Footer ]'>
-      <div className='container mx-auto p-5 text-dc-grey'>
+      <div className='container mx-auto p-5 text-dc-grey dark:text-white'>
         <div className='grid grid-flow-row md:grid-cols-6 md:grid-rows-1 grid-cols-1 grid-rows-2 md:gap-6'>
           <div className='self-center text-left col-span-5'>
             <div className='[ Footer__Text ] font-mono text-lg font-semibold'>
               Designed and developed by{' '}
               <a
-                className='[ Footer__Text ][ Footer__Link ] text-blue-700 hover:text-blue-300'
+                className='[ Footer__Text ][ Footer__Link ] text-blue-700 hover:text-blue-300 dark:text-blue-500 dark:hover:text-blue-300'
                 href={footerData.developedBy.link}
                 target='_blank'
                 rel='noreferrer'
@@ -27,7 +27,7 @@ export default function footer() {
             <div className='[ Footer__Text ] font-mono text-lg font-semibold'>
               Built in{' '}
               <a
-                className='[ Footer__Text ][ Footer__Link ] text-pink-700 hover:text-pink-300'
+                className='[ Footer__Text ][ Footer__Link ] text-pink-700 hover:text-pink-300 dark:text-pink-500 dark:hover:text-pink-300'
                 href={footerData.builtIn.link}
                 target='_blank'
                 rel='noreferrer'
@@ -36,7 +36,7 @@ export default function footer() {
               </a>
               . Hosted on{' '}
               <a
-                className='[ Footer__Text ][ Footer__Link ] text-green-700 hover:text-green-300'
+                className='[ Footer__Text ][ Footer__Link ] text-green-700 hover:text-green-300 dark:text-green-500 dark:hover:text-green-300'
                 href={footerData.hostedOn.link}
                 target='_blank'
                 rel='noreferrer'
@@ -47,7 +47,7 @@ export default function footer() {
             <div className='[ Footer__Text ] font-mono text-lg font-semibold'>
               Inspired by{' '}
               <a
-                className='[ Footer__Text ][ Footer__Link ] text-indigo-700 hover:text-indigo-300'
+                className='[ Footer__Text ][ Footer__Link ] text-indigo-700 hover:text-indigo-300 dark:text-indigo-500 dark:hover:text-indigo-300'
                 href={footerData.inspiredBy.link}
                 target='_blank'
                 rel='noreferrer'
@@ -84,7 +84,7 @@ export default function footer() {
                 rel='noreferrer'
               >
                 <FaGithub
-                  className='hover:text-gray-900'
+                  className='hover:text-gray-900 dark:hover:text-gray-300'
                   title='Check out my GitHub'
                 />
               </a>

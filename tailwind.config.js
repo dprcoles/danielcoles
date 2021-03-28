@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -11,6 +11,7 @@ module.exports = {
         'pastel-blue': '#A7C7E7',
         'pastel-pink': '#FFD1DC',
         'pastel-green': '#77DD77',
+        'dark-pastel-blue': '#23395D',
       },
       fontFamily: {
         roboto: ['robotomedium'],
