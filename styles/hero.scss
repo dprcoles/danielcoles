@@ -4,6 +4,18 @@
   display: none;
 }
 
+.BackgroundSplash {
+  fill: var(--backgroundSplashColor);
+}
+
+.Hoodie {
+  fill: var(--hoodieColor);
+}
+
+.Hoodie__Logo {
+  fill: var(--hoodieLogoColor);
+}
+
 /*** Common browsers ***/
 .Hero__Text::selection {
   background-color: var(--highlightBgColor);

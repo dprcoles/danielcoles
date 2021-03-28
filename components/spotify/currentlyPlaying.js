@@ -18,7 +18,7 @@ export default function CurrentlyPlaying() {
               />
             </div>
             <div className='[ Spotify ][ CurrentlyPlaying__TrackInfo ] md:col-span-4 col-span-2'>
-              <div className='[ Spotify ][ CurrentlyPlaying__Text ] italic opacity-75 whitespace-nowrap overflow-hidden'>
+              <div className='[ Spotify ][ CurrentlyPlaying__Text ] italic opacity-75 whitespace-nowrap overflow-hidden pt-2'>
                 Currently Playing...
               </div>
               <div className='[ Spotify ][ CurrentlyPlaying__TrackTitle ][ CurrentlyPlaying__Text ] font-extrabold text-lg md:text-3xl whitespace-nowrap overflow-hidden'>

@@ -7,7 +7,7 @@ import AboutMe from '../components/aboutme'
 export default function Home({ data, aboutmeData }) {
   return (
     <Wrapper title={`${data.fullName} | ${data.jobTitle}`}>
-      <div className='[ First-Section ]'>
+      <div>
         <Hero
           firstName={data.firstName}
           lastName={data.lastName}
