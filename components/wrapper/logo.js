@@ -6,6 +6,7 @@ export default function logo() {
       viewBox='0 0 100 100'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      alt='Daniel Coles Logo'
     >
       <g clipPath='url(#clip0)'>
         <path
