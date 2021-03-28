@@ -17,25 +17,35 @@
 }
 
 :root {
-  --heroColor: #ffd1dc;
-  --logoColor: #404040;
-  --borderColor: #404040;
+  --backgroundColor: theme('colors.white');
+  --heroColor: theme('colors.light-hero');
+  --logoColor: theme('colors.dc-grey');
+  --borderColor: theme('colors.dc-grey');
 
-  --highlightBgColor: #404040;
-  --heroHighlightColor: #ffd1dc;
-  --aboutmeHighlightColor: #a7c7e7;
-  --spotifyHighlightColor: #a7c7e7;
+  --backgroundSplashColor: theme('colors.light-aboutme');
+  --hoodieColor: theme('colors.alt-grey');
+  --hoodieLogoColor: theme('colors.black');
+
+  --highlightBgColor: theme('colors.dc-grey');
+  --heroHighlightColor: theme('colors.light-hero');
+  --aboutmeHighlightColor: theme('colors.light-aboutme');
+  --spotifyHighlightColor: theme('colors.light-aboutme');
 }
 
 [class='dark'] {
-  --heroColor: #9673a6;
-  --logoColor: #fff;
-  --borderColor: #fff;
+  --backgroundColor: theme('colors.dc-grey');
+  --heroColor: theme('colors.dark-hero');
+  --logoColor: theme('colors.white');
+  --borderColor: theme('colors.white');
 
-  --highlightBgColor: #fff;
-  --heroHighlightColor: #9673a6;
-  --aboutmeHighlightColor: #23395d;
-  --spotifyHighlightColor: #23395d;
+  --backgroundSplashColor: theme('colors.dark-aboutme');
+  --hoodieColor: theme('colors.dark-alt-grey');
+  --hoodieLogoColor: theme('colors.white');
+
+  --highlightBgColor: theme('colors.white');
+  --heroHighlightColor: theme('colors.dark-hero');
+  --aboutmeHighlightColor: theme('colors.dark-aboutme');
+  --spotifyHighlightColor: theme('colors.dark-aboutme');
 }
 
 .Hero::after {
@@ -47,7 +57,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--heroColor);
-  z-index: -2;
+  z-index: -1;
 }
 
 .Navbar__Logo {

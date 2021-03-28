@@ -7,11 +7,14 @@ module.exports = {
     extend: {
       colors: {
         'dc-grey': '#404040',
+        'alt-grey': '#AFB1B1',
+        'dark-alt-grey': '#262528',
+        'light-aboutme': '#A7C7E7',
+        'dark-aboutme': '#23395D',
+        'light-hero': '#FFD1DC',
+        'dark-hero': '#9673a6',
         'pastel-yellow': '#FDFD96',
-        'pastel-blue': '#A7C7E7',
-        'pastel-pink': '#FFD1DC',
         'pastel-green': '#77DD77',
-        'dark-pastel-blue': '#23395D',
       },
       fontFamily: {
         roboto: ['robotomedium'],
