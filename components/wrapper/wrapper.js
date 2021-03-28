@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Navbar from './navbar'
 import Footer from './footer'
+import { useTheme } from 'next-themes'
 
 export default function Wrapper(props) {
+  const { theme, setTheme } = useTheme()
   const { children, ...customMeta } = props
   const meta = {
     title: 'Daniel Coles | Software Engineer',
@@ -26,7 +28,7 @@ export default function Wrapper(props) {
         <meta name='twitter:description' content={meta.description} />
         <meta name='twitter:image' content={meta.image} />
       </Head>
-      <Navbar />
+      <Navbar theme={theme} setTheme={setTheme} />
       <main className='[ Main-Content ]'>{children}</main>
       <Footer />
     </div>

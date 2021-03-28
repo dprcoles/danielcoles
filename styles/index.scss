@@ -16,6 +16,45 @@
   z-index: -1;
 }
 
+:root {
+  --heroColor: #ffd1dc;
+  --logoColor: #404040;
+  --borderColor: #404040;
+
+  --highlightBgColor: #404040;
+  --heroHighlightColor: #ffd1dc;
+  --aboutmeHighlightColor: #a7c7e7;
+  --spotifyHighlightColor: #a7c7e7;
+}
+
+[class='dark'] {
+  --heroColor: #9673a6;
+  --logoColor: #fff;
+  --borderColor: #fff;
+
+  --highlightBgColor: #fff;
+  --heroHighlightColor: #9673a6;
+  --aboutmeHighlightColor: #23395d;
+  --spotifyHighlightColor: #23395d;
+}
+
+.Hero::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--heroColor);
+  z-index: -2;
+}
+
+.Navbar__Logo {
+  fill: var(--logoColor);
+  stroke: var(--logoColor);
+}
+
 @import 'aboutme.scss';
 @import 'spotify.scss';
 @import 'footer.scss';

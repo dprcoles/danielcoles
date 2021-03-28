@@ -1,46 +1,34 @@
 /*** Hero ***/
 
-.Hero::after {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffd1dc;
-  z-index: -2;
-}
-
 .ScreenLogger {
   display: none;
 }
 
 /*** Common browsers ***/
 .Hero__Text::selection {
-  background-color: #404040;
-  color: #ffd1dc;
+  background-color: var(--highlightBgColor);
+  color: var(--heroHighlightColor);
 }
 
 /*** Mozilla based browsers ***/
 .Hero__Text::-moz-selection {
-  background-color: #404040;
-  color: #ffd1dc;
+  background-color: var(--highlightBgColor);
+  color: var(--heroHighlightColor);
 }
 
 /***For Other Browsers ***/
 .Hero__Text::-o-selection {
-  background-color: #404040;
-  color: #ffd1dc;
+  background-color: var(--highlightBgColor);
+  color: var(--heroHighlightColor);
 }
 
 .Hero__Text::-ms-selection {
-  background-color: #404040;
-  color: #ffd1dc;
+  background-color: var(--highlightBgColor);
+  color: var(--heroHighlightColor);
 }
 
 /*** For Webkit ***/
 .Hero__-Text-::-webkit-selection {
-  background-color: #404040;
-  color: #ffd1dc;
+  background-color: var(--highlightBgColor);
+  color: var(--heroHighlightColor);
 }

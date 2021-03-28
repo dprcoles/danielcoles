@@ -1,18 +1,14 @@
 import NextLink from 'next/link'
+import { FaSun, FaMoon } from 'react-icons/fa'
+import Logo from './logo'
 
-export default function navbar() {
+export default function navbar({ theme, setTheme }) {
   return (
     <header role='banner' className='[ SiteHeader ]'>
-      <nav className='[ Navbar ] flex justify-between self-center container mx-auto p-5 text-dc-grey'>
+      <nav className='[ Navbar ] flex justify-between self-center container mx-auto p-5 text-dc-grey dark:text-white'>
         <div className='[ Navbar__Item ][ Logo ]'>
           <a href='/'>
-            <img
-              src='/logo.svg'
-              height='50px'
-              width='50px'
-              alt='Daniel Coles Logo'
-              className='[ Navbar__Text ]'
-            />
+            <Logo />
           </a>
         </div>
         <ul className='flex flex-row'>
@@ -43,6 +39,19 @@ export default function navbar() {
                 Tech
               </a>
             </NextLink>
+          </li>
+          <li className='[ Navbar__Item ][ Tech__Link ] md:px-4 px-2 self-center text-center'>
+            <button
+              aria-label={`Switch to ${
+                theme === 'dark' ? 'light' : 'dark'
+              } mode`}
+              type='button'
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              className='self-center p-2'
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <FaSun /> : <FaMoon />}
+            </button>
           </li>
         </ul>
       </nav>
