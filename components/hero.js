@@ -8,16 +8,16 @@ export default function hero({ firstName, lastName, jobTitle }) {
           <Minime />
         </div>
         <div className='[ Hero__Message ] self-center'>
-          <div className='[ Hero__Text ][ Greeting ] text-xl md:text-3xl font-semibold font-roboto pb-2'>
+          <div className='[ Hero__Text ][ Greeting ] text-2xl md:text-3xl font-semibold font-roboto pb-2'>
             👋 Hey, I'm
           </div>
-          <div className='[ Hero__Text ][ FirstName ] text-7xl md:text-9xl font-extrabold font-roboto'>
+          <div className='[ Hero__Text ][ FirstName ] text-8xl md:text-9xl font-extrabold font-roboto'>
             {firstName}
           </div>
-          <div className='[ Hero__Text ][ LastName ] text-7xl md:text-9xl font-extrabold font-roboto'>
+          <div className='[ Hero__Text ][ LastName ] text-8xl md:text-9xl font-extrabold font-roboto'>
             {lastName}
           </div>
-          <div className='[ Hero__Text ][ JobTitle ] text-3xl md:text-5xl font-semibold font-roboto'>
+          <div className='[ Hero__Text ][ JobTitle ] text-4xl md:text-5xl font-semibold font-roboto'>
             {jobTitle}
           </div>
         </div>
