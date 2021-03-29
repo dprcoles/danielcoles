@@ -9,7 +9,7 @@ import { footerData } from './footerData'
 
 export default function footer() {
   return (
-    <footer className='[ Footer ]'>
+    <footer className='[ Footer ] bg-white dark:bg-dc-grey border-t-2 border-dc-grey dark:border-white'>
       <div className='container mx-auto p-5 text-dc-grey dark:text-white'>
         <div className='grid grid-flow-row md:grid-cols-6 md:grid-rows-1 grid-cols-1 grid-rows-2 md:gap-6'>
           <div className='self-center text-left col-span-5'>
