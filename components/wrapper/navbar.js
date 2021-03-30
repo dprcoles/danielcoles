@@ -66,7 +66,7 @@ export default function navbar({ theme, setTheme }) {
                 </a>
               </NextLink>
             </li>
-            <li className='[ Navbar__Item ][ Experience__Link ] md:py-4 py-2 self-center text-left md:text-center'>
+            <li className='[ Navbar__Item ][ Experience__Link ] md:px-4 py-2 self-center text-left md:text-center'>
               <NextLink href='/experience'>
                 <a
                   className='[ Navbar__Text ] text-base md:text-lg font-roboto font-bold'
