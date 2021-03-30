@@ -7,29 +7,29 @@
 
 /*** Common browsers ***/
 .Footer__Text::selection {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--footerHighlightColor);
+  color: var(--highlightBgColor);
 }
 
 /*** Mozilla based browsers ***/
 .Footer__Text::-moz-selection {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--footerHighlightColor);
+  color: var(--highlightBgColor);
 }
 
 /***For Other Browsers ***/
 .Footer__Text::-o-selection {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--footerHighlightColor);
+  color: var(--highlightBgColor);
 }
 
 .Footer__Text::-ms-selection {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--footerHighlightColor);
+  color: var(--highlightBgColor);
 }
 
 /*** For Webkit ***/
 .Footer__Text::-webkit-selection {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--footerHighlightColor);
+  color: var(--highlightBgColor);
 }
