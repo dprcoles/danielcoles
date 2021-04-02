@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 
-import fetcher from '../../utils/fetcher'
+import fetcher from '@/utils/fetcher'
 
 export default function CurrentlyPlaying() {
   const { data } = useSWR('/api/getCurrentlyPlaying', fetcher)

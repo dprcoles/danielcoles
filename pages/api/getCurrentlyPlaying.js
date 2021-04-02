@@ -1,4 +1,4 @@
-import { getCurrentlyPlaying } from '../../utils/spotifyApi'
+import { getCurrentlyPlaying } from '@/utils/spotifyApi'
 
 export default async (_, res) => {
   const response = await getCurrentlyPlaying()

@@ -1,8 +1,8 @@
 import fs from 'fs'
-import Wrapper from '../components/wrapper/wrapper'
+import Wrapper from '@/components/wrapper/wrapper'
 import path from 'path'
-import Hero from '../components/hero'
-import AboutMe from '../components/aboutme'
+import Hero from '@/components/hero'
+import AboutMe from '@/components/aboutme'
 
 export default function Home({ data, aboutmeData }) {
   return (
