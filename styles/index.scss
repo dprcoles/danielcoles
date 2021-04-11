@@ -50,6 +50,13 @@
   --footerHighlightColor: theme('colors.white');
 }
 
+.Wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
   .Hero::after {
     content: '';

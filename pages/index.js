@@ -18,6 +18,7 @@ export default function Home({ data, aboutmeData }) {
         data={aboutmeData}
         firstName={data.firstName}
         lastName={data.lastName}
+        employer={data.employer}
         jobTitle={data.jobTitle}
       />
     </Wrapper>

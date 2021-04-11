@@ -28,9 +28,11 @@ export default function Wrapper(props) {
         <meta name='twitter:description' content={meta.description} />
         <meta name='twitter:image' content={meta.image} />
       </Head>
-      <Navbar theme={theme} setTheme={setTheme} />
-      <main className='[ Main-Content ]'>{children}</main>
-      <Footer />
+      <div className='[ Wrapper ]'>
+        <Navbar theme={theme} setTheme={setTheme} />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </div>
   )
 }
