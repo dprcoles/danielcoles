@@ -13,6 +13,7 @@ export default function Wrapper() {
     twitterHandle: '@_danielcoles',
     url: 'https://danielcoles.dev',
     image: 'https://danielcoles.dev/meta.png',
+    imageAlt: 'Logo for danielcoles.dev',
   }
 
   return (
@@ -25,12 +26,12 @@ export default function Wrapper() {
         <meta property='og:title' content={meta.title} />
         <meta property='og:description' content={meta.description} />
         <meta property='og:image' content={meta.image} />
-        <meta property='og:image:alt' content='Logo for danielcoles.dev' />
+        <meta property='og:image:alt' content={meta.imageAlt} />
         <meta name='twitter:creator' content={meta.twitterHandle} />
         <meta name='twitter:title' content={meta.title} />
         <meta name='twitter:description' content={meta.description} />
         <meta name='twitter:image' content={meta.image} />
-        <meta name='twitter:image:alt' content='Logo for danielcoles.dev' />
+        <meta name='twitter:image:alt' content={meta.imageAlt} />
       </Head>
       <div className='[ Wrapper ]'>
         <Navbar theme={theme} setTheme={setTheme} />
