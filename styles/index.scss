@@ -50,6 +50,10 @@
   --footerHighlightColor: theme('colors.white');
 }
 
+html {
+  background-color: var(--backgroundColor);
+}
+
 .Wrapper {
   display: flex;
   min-height: 100vh;
