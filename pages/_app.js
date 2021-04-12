@@ -3,7 +3,7 @@ import '@/styles/index.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute='class'>
+    <ThemeProvider attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   )

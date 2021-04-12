@@ -8,11 +8,7 @@ export default function Home({ data, aboutmeData }) {
   return (
     <Wrapper title={`${data.fullName} | ${data.jobTitle}`}>
       <div>
-        <Hero
-          firstName={data.firstName}
-          lastName={data.lastName}
-          jobTitle={data.jobTitle}
-        />
+        <Hero firstName={data.firstName} lastName={data.lastName} jobTitle={data.jobTitle} />
       </div>
       <AboutMe
         data={aboutmeData}

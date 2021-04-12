@@ -9,15 +9,12 @@ export default async (_, res) => {
   const track = await response.json()
 
   const albumImageUrl = track.item.album.images[0].url
-  const artist = track.item.artists.map(x => x.name).join(', ')
+  const artist = track.item.artists.map((x) => x.name).join(', ')
   const isPlaying = track.is_playing
   const title = track.item.name
   const trackUrl = track.item.external_urls.spotify
 
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=60, stale-while-revalidate=30'
-  )
+  res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=30')
 
   return res.status(200).json({
     albumImageUrl,

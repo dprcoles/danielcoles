@@ -8,28 +8,28 @@ export default function navbar({ theme, setTheme }) {
 
   return (
     <header
-      role='banner'
-      className='[ SiteHeader ] flex flex-wrap self-center container mx-auto p-5 text-dc-grey dark:text-white bg-white dark:bg-dc-grey md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none border-b-2 md:border-none dark:border-white border-dc-grey'
+      role="banner"
+      className="[ SiteHeader ] flex flex-wrap self-center container mx-auto p-5 text-dc-grey dark:text-white bg-white dark:bg-dc-grey md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none border-b-2 md:border-none dark:border-white border-dc-grey"
     >
       <button
-        className='[ Navbar__Item ][ Hamburger ] md:hidden self-center'
-        type='button'
-        aria-label='Navbar Menu'
-        title='Navbar Menu'
+        className="[ Navbar__Item ][ Hamburger ] md:hidden self-center"
+        type="button"
+        aria-label="Navbar Menu"
+        title="Navbar Menu"
         onClick={() => setMenuIsActive(!menuIsActive)}
       >
         <FaBars />
       </button>
-      <div className='[ Navbar__Item ][ Logo ] mx-auto md:mr-auto md:ml-0'>
-        <a href='/' aria-label='Daniel Coles Logo' title='Daniel Coles Logo'>
+      <div className="[ Navbar__Item ][ Logo ] mx-auto md:mr-auto md:ml-0">
+        <a href="/" aria-label="Daniel Coles Logo" title="Daniel Coles Logo">
           <Logo />
         </a>
       </div>
       <button
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-        type='button'
+        type="button"
         title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-        className='self-center p-2 md:hidden'
+        className="self-center p-2 md:hidden"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
         {theme === 'dark' ? <FaSun /> : <FaMoon />}
@@ -41,61 +41,59 @@ export default function navbar({ theme, setTheme }) {
       >
         <nav>
           <ul
-            id='NavbarMenu'
-            className='[ Navbar__Menu ] self-center text-dc-grey dark:text-white md:flex md:flex-row'
+            id="NavbarMenu"
+            className="[ Navbar__Menu ] self-center text-dc-grey dark:text-white md:flex md:flex-row"
           >
-            <li className='[ Navbar__Item ][ Dashboard__Link ] md:px-4 py-2 self-center text-left md:text-center'>
-              <NextLink href='/dashboard'>
+            <li className="[ Navbar__Item ][ Dashboard__Link ] md:px-4 py-2 self-center text-left md:text-center">
+              <NextLink href="/dashboard">
                 <a
-                  className='[ Navbar__Text ] text-base md:text-lg font-roboto font-bold'
-                  aria-label='Go to Dashboard'
-                  label='Go to Dashboard'
+                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  aria-label="Go to Dashboard"
+                  label="Go to Dashboard"
                 >
                   Dashboard
                 </a>
               </NextLink>
             </li>
-            <li className='[ Navbar__Item ][ Projects__Link ] md:px-4 py-2 self-center text-left md:text-center'>
-              <NextLink href='/projects'>
+            <li className="[ Navbar__Item ][ Projects__Link ] md:px-4 py-2 self-center text-left md:text-center">
+              <NextLink href="/projects">
                 <a
-                  className='[ Navbar__Text ] text-base md:text-lg font-roboto font-bold'
-                  aria-label='Go to Dashboard'
-                  label='Go to Projects'
+                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  aria-label="Go to Dashboard"
+                  label="Go to Projects"
                 >
                   Projects
                 </a>
               </NextLink>
             </li>
-            <li className='[ Navbar__Item ][ Experience__Link ] md:px-4 py-2 self-center text-left md:text-center'>
-              <NextLink href='/experience'>
+            <li className="[ Navbar__Item ][ Experience__Link ] md:px-4 py-2 self-center text-left md:text-center">
+              <NextLink href="/experience">
                 <a
-                  className='[ Navbar__Text ] text-base md:text-lg font-roboto font-bold'
-                  aria-label='Go to Dashboard'
-                  label='Go to Experience'
+                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  aria-label="Go to Dashboard"
+                  label="Go to Experience"
                 >
                   Experience
                 </a>
               </NextLink>
             </li>
-            <li className='[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center'>
-              <NextLink href='/tech'>
+            <li className="[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center">
+              <NextLink href="/tech">
                 <a
-                  className='[ Navbar__Text ] text-base md:text-lg font-roboto font-bold'
-                  aria-label='Go to Dashboard'
-                  label='Go to Tech'
+                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  aria-label="Go to Dashboard"
+                  label="Go to Tech"
                 >
                   Tech
                 </a>
               </NextLink>
             </li>
-            <li className='[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center'>
+            <li className="[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <button
-                aria-label={`Switch to ${
-                  theme === 'dark' ? 'light' : 'dark'
-                } mode`}
-                type='button'
+                aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                type="button"
                 title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                className='self-center p-2 hidden md:flex'
+                className="self-center p-2 hidden md:flex"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               >
                 {theme === 'dark' ? <FaSun /> : <FaMoon />}
