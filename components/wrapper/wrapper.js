@@ -3,14 +3,16 @@ import Navbar from './navbar'
 import Footer from './footer'
 import { useTheme } from 'next-themes'
 
-export default function Wrapper(props) {
+export default function Wrapper() {
   const { theme, setTheme } = useTheme()
-  const { children, ...customMeta } = props
   const meta = {
     title: 'Daniel Coles | Software Engineer',
     description: `Full Stack Software Engineer that loves making fun things with code!`,
     type: 'website',
-    ...customMeta,
+    siteName: 'Daniel Coles',
+    twitterHandle: '@_danielcoles',
+    url: 'https://danielcoles.dev',
+    image: 'https://danielcoles.dev/meta.png',
   }
 
   return (
@@ -19,14 +21,16 @@ export default function Wrapper(props) {
         <title>{meta.title}</title>
         <meta name='description' content={meta.description} />
         <meta property='og:type' content={meta.type} />
-        <meta property='og:site_name' content='Daniel Coles' />
+        <meta property='og:site_name' content={meta.siteName} />
         <meta property='og:title' content={meta.title} />
         <meta property='og:description' content={meta.description} />
         <meta property='og:image' content={meta.image} />
-        <meta name='twitter:site' content='@_danielcoles' />
+        <meta property='og:image:alt' content='Logo for danielcoles.dev' />
+        <meta name='twitter:creator' content={meta.twitterHandle} />
         <meta name='twitter:title' content={meta.title} />
         <meta name='twitter:description' content={meta.description} />
         <meta name='twitter:image' content={meta.image} />
+        <meta name='twitter:image:alt' content='Logo for danielcoles.dev' />
       </Head>
       <div className='[ Wrapper ]'>
         <Navbar theme={theme} setTheme={setTheme} />
