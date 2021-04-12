@@ -3,8 +3,11 @@ import Navbar from './navbar'
 import Footer from './footer'
 import { useTheme } from 'next-themes'
 
-export default function Wrapper() {
+export default function Wrapper(props) {
   const { theme, setTheme } = useTheme()
+
+  const { children } = props
+
   const meta = {
     title: 'Daniel Coles | Software Engineer',
     description: `Full Stack Software Engineer that loves making fun things with code!`,
