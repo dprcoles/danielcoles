@@ -15,16 +15,16 @@ export default function NowPlaying() {
             key={index}
             className={`[ Spotify ][ TopTracks__Track ][ Rank__${
               index + 1
-            } ] flex flex-row items-baseline`}
+            } ] flex flex-row items-baseline relative overflow-hidden whitespace-nowrap`}
           >
             <p className="[ Spotify ][ TopTracks__Text ] font-bold md:text-xl text-lg text-left">
               {(index + 1).toString().padStart(2, '0')}
             </p>
             <div className="pl-4">
-              <div className="[ Spotify ][ TopTracks__Text ] font-bold md:text-xl text-lg whitespace-nowrap overflow-hidden">
+              <div className="[ Spotify ][ TopTracks__Text ] font-bold md:text-xl text-lg">
                 {track.title}
               </div>
-              <div className="[ Spotify ][ TopTracks__Text ] font-bold md:text-lg text-base opacity-75 whitespace-nowrap overflow-hidden">
+              <div className="[ Spotify ][ TopTracks__Text ] font-bold md:text-lg text-base opacity-75">
                 {track.artist}
               </div>
             </div>
