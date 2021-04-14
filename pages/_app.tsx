@@ -1,7 +1,9 @@
+import React from 'react'
+import { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import '@/styles/index.scss'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <Component {...pageProps} />

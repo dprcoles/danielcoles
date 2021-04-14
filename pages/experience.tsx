@@ -3,7 +3,7 @@ import Experience from '@/components/experience/experience'
 
 export default function experience() {
   return (
-    <Wrapper title="Daniel Coles | Experience">
+    <Wrapper>
       <div className="py-36">
         <Experience />
       </div>

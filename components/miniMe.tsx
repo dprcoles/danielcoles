@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import gsap from 'gsap'
 
 export default function minime() {
@@ -23,15 +24,16 @@ export default function minime() {
         screenLog: document.querySelector('.ScreenLogger'),
       }
 
-      let xPosition
-      let yPosition
+      let xPosition: any
+      let yPosition: any
 
-      let storedXPosition
-      let storedYPosition
+      let storedXPosition: any
+      let storedYPosition: any
 
-      let mapWidth
-      let mapHeight
+      let mapWidth: { (arg0: any): any; (value: number): number }
+      let mapHeight: { (arg0: any): any; (value: number): number }
 
+      // @ts-ignore
       function setMaps() {
         mapWidth = gsap.utils.mapRange(0, innerWidth, -50, 50)
         mapHeight = gsap.utils.mapRange(0, innerHeight, -50, 50)
@@ -40,13 +42,15 @@ export default function minime() {
       window.addEventListener('resize', setMaps)
       setMaps()
 
+      // @ts-ignore
       function moveSVG() {
         if (storedXPosition === xPosition && storedYPosition === yPosition) return
 
-        let x = xPosition
-        let y = yPosition
+        const x = xPosition
+        const y = yPosition
 
         if (xPosition && yPosition) {
+          // @ts-ignore
           dom.screenLog.innerHTML = `
           <p> x: ${Math.round(x)}</p>
           <p> y: ${Math.round(y)} </p>`
@@ -86,7 +90,8 @@ export default function minime() {
 
       gsap.ticker.add(moveSVG)
 
-      function updateMouseCoords(event) {
+      // @ts-ignore
+      function updateMouseCoords(event: { clientX: any; clientY: any }) {
         xPosition = mapWidth(event.clientX)
         yPosition = mapHeight(event.clientY)
       }

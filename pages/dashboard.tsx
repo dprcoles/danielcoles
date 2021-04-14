@@ -4,7 +4,7 @@ import Dashboard from '@/components/dashboard/dashboard'
 export default function dashboard() {
   return (
     <div>
-      <Wrapper title="Daniel Coles | Dashboard">
+      <Wrapper>
         <div className="py-36">
           <Dashboard />
         </div>

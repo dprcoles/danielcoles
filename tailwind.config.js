@@ -1,7 +1,10 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const purgeEnabled = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
+  purge: {
+    enabled: purgeEnabled,
+    content: ['./components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
+  },
   darkMode: 'class',
   theme: {
     extend: {
@@ -18,7 +21,6 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['robotomedium'],
-        sans: ['robotomedium', ...defaultTheme.fontFamily.sans],
       },
     },
   },
