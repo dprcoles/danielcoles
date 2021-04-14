@@ -1,7 +1,20 @@
 import CurrentlyPlaying from './spotify/currentlyPlaying'
 import TopTracks from './spotify/topTracks'
 
-export default function aboutme({ data, firstName, employer, jobTitle }) {
+interface aboutMeProps {
+  data: {
+    interests: string
+    hobbies: string
+    games: Array<string>
+    location: string
+    musicText: string
+  }
+  firstName: string
+  employer: string
+  jobTitle: string
+}
+
+export default function aboutMe({ data, firstName, employer, jobTitle }: aboutMeProps) {
   return (
     <section className="[ AboutMe ] bg-light-aboutme dark:bg-dark-aboutme">
       <div className="container mx-auto p-5 text-dc-grey dark:text-white">

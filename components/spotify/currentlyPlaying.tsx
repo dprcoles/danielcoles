@@ -1,9 +1,16 @@
 import useSWR from 'swr'
-
 import fetcher from '@/utils/fetcher'
 
+type currentlyPlayingData = {
+  isPlaying: boolean
+  albumImageUrl: string
+  title: string
+  artist: string
+  trackUrl: string
+}
+
 export default function CurrentlyPlaying() {
-  const { data } = useSWR('/api/getCurrentlyPlaying', fetcher)
+  const { data } = useSWR<currentlyPlayingData>('/api/getCurrentlyPlaying', fetcher)
 
   return (
     <div className="[ Spotify ][ CurrentlyPlaying ] md:p-4 font-roboto">

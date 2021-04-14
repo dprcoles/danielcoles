@@ -3,7 +3,7 @@ import Tech from '@/components/tech/tech'
 
 export default function tech() {
   return (
-    <Wrapper title="Daniel Coles | Tech">
+    <Wrapper>
       <div className="py-36">
         <Tech />
       </div>

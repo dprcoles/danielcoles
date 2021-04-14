@@ -1,11 +1,17 @@
-import Minime from './minime'
+import MiniMe from './miniMe'
 
-export default function hero({ firstName, lastName, jobTitle }) {
+interface HeroProps {
+  firstName: string
+  lastName: string
+  jobTitle: string
+}
+
+export default function hero({ firstName, lastName, jobTitle }: HeroProps) {
   return (
     <header className="[ Hero ] container mx-auto text-dc-grey dark:text-white pt-8 bg-light-hero dark:bg-dark-hero md:bg-transparent md:dark:bg-transparent">
       <div className="grid grid-flow-row grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 md:gap-4 md:p-8 p-4 pt-8">
         <div className="[ Hero__Me ] md:self-center">
-          <Minime />
+          <MiniMe />
         </div>
         <div className="[ Hero__Message ] self-center">
           <div className="[ Hero__Text ][ Greeting ] text-2xl md:text-3xl font-semibold font-roboto pb-2">

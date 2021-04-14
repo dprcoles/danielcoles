@@ -3,10 +3,12 @@ import Navbar from './navbar'
 import Footer from './footer'
 import { useTheme } from 'next-themes'
 
-export default function Wrapper(props) {
-  const { theme, setTheme } = useTheme()
+interface WrapperProps {
+  children?: React.ReactNode
+}
 
-  const { children, ...customMeta } = props
+export default function Wrapper({ children }: WrapperProps) {
+  const { theme, setTheme } = useTheme()
 
   const meta = {
     title: 'Daniel Coles | Software Engineer',
@@ -17,7 +19,6 @@ export default function Wrapper(props) {
     url: 'https://danielcoles.dev',
     image: 'https://danielcoles.dev/meta.png',
     imageAlt: 'Logo for danielcoles.dev',
-    ...customMeta,
   }
 
   return (

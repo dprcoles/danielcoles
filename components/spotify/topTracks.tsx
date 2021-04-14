@@ -1,8 +1,17 @@
 import useSWR from 'swr'
 import fetcher from '@/utils/fetcher'
 
+type topTracksData = {
+  tracks: Array<trackData>
+}
+
+type trackData = {
+  title: string
+  artist: string
+}
+
 export default function NowPlaying() {
-  const { data } = useSWR('/api/getTopTracks', fetcher)
+  const { data } = useSWR<topTracksData>('/api/getTopTracks', fetcher)
 
   return (
     <div className="[ Spotify ][ TopTracks ] p-4 font-roboto">
@@ -10,7 +19,7 @@ export default function NowPlaying() {
         My top 10 songs on Spotify
       </div>
       <div className="[ Spotify ][ TopTracks__List ]">
-        {data?.tracks.map((track, index) => (
+        {data?.tracks.map((track: trackData, index: number) => (
           <div
             key={index}
             className={`[ Spotify ][ TopTracks__Track ][ Rank__${

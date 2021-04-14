@@ -3,7 +3,12 @@ import NextLink from 'next/link'
 import { FaSun, FaMoon, FaBars } from 'react-icons/fa'
 import Logo from './logo'
 
-export default function navbar({ theme, setTheme }) {
+interface NavbarProps {
+  theme: string | undefined
+  setTheme: (theme: string) => void
+}
+
+export default function navbar({ theme, setTheme }: NavbarProps) {
   const [menuIsActive, setMenuIsActive] = useState(false)
 
   return (
@@ -49,7 +54,6 @@ export default function navbar({ theme, setTheme }) {
                 <a
                   className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
                   aria-label="Go to Dashboard"
-                  label="Go to Dashboard"
                 >
                   Dashboard
                 </a>
@@ -59,8 +63,7 @@ export default function navbar({ theme, setTheme }) {
               <NextLink href="/projects">
                 <a
                   className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
-                  aria-label="Go to Dashboard"
-                  label="Go to Projects"
+                  aria-label="Go to Projects"
                 >
                   Projects
                 </a>
@@ -70,8 +73,7 @@ export default function navbar({ theme, setTheme }) {
               <NextLink href="/experience">
                 <a
                   className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
-                  aria-label="Go to Dashboard"
-                  label="Go to Experience"
+                  aria-label="Go to Experience"
                 >
                   Experience
                 </a>
@@ -81,8 +83,7 @@ export default function navbar({ theme, setTheme }) {
               <NextLink href="/tech">
                 <a
                   className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
-                  aria-label="Go to Dashboard"
-                  label="Go to Tech"
+                  aria-label="Go to Tech"
                 >
                   Tech
                 </a>
