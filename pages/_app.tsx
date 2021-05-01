@@ -1,9 +1,9 @@
 import React from 'react'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
-import '@/styles/index.scss'
+import '@/styles/main.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <Component {...pageProps} />
@@ -11,4 +11,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default App

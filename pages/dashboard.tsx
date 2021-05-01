@@ -1,5 +1,5 @@
-import Wrapper from '@/components/wrapper/wrapper'
-import Dashboard from '@/components/dashboard/dashboard'
+import Wrapper from '@/components/Wrapper'
+import { Dashboard } from '@/components/dashboard'
 
 export default function dashboard() {
   return (

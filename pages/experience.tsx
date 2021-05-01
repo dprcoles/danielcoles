@@ -1,5 +1,5 @@
-import Wrapper from '@/components/wrapper/wrapper'
-import Experience from '@/components/experience/experience'
+import Wrapper from '@/components/Wrapper'
+import { Experience } from '@/components/experience'
 
 export default function experience() {
   return (

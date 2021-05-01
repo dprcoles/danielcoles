@@ -1,5 +1,5 @@
-import Wrapper from '@/components/wrapper/wrapper'
-import Projects from '@/components/projects/projects'
+import Wrapper from '@/components/Wrapper'
+import { Projects } from '@/components/projects'
 
 export default function projects() {
   return (
