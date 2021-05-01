@@ -1,4 +1,3 @@
-import { CurrentlyPlaying, TopTracks } from './spotify'
 import { firstName, employer, jobTitle, games } from '@/utils/constants'
 
 const About: React.FC = () => {
