@@ -8,7 +8,7 @@ export default function Home() {
       <div>
         <Hero firstName={firstName} lastName={lastName} jobTitle={jobTitle} />
       </div>
-      <section className="[ About ] bg-light-aboutme dark:bg-dark-about">
+      <section className="[ About ] bg-light-about dark:bg-dark-about">
         <div className="container mx-auto p-5 text-dc-grey dark:text-white">
           <About />
           <Spotify />
