@@ -20,7 +20,7 @@ module.exports = {
         'pastel-green': '#77DD77',
       },
       fontFamily: {
-        roboto: ['robotomedium'],
+        roboto: ['ubuntu'],
       },
     },
   },

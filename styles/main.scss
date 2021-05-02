@@ -5,9 +5,9 @@
 @import 'components';
 
 @font-face {
-  font-family: 'robotomedium';
-  src: url(/fonts/roboto-medium-webfont.woff2) format('woff2'),
-    url(/fonts/roboto-medium-webfont.woff) format('woff');
+  font-family: 'ubuntu';
+  src: url(/fonts/ubuntu-medium-webfont.woff2) format('woff2'),
+    url(/fonts/ubuntu-medium-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -33,6 +33,7 @@
   --aboutHighlightColor: theme('colors.light-about');
   --spotifyHighlightColor: theme('colors.light-about');
   --footerHighlightColor: theme('colors.dc-grey');
+  --projectsBorderColor: theme('colors.black');
 }
 
 [class='dark'] {
@@ -50,6 +51,7 @@
   --aboutHighlightColor: theme('colors.white');
   --spotifyHighlightColor: theme('colors.white');
   --footerHighlightColor: theme('colors.white');
+  --projectsBorderColor: theme('colors.white');
 }
 
 html {
