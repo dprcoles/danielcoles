@@ -14,12 +14,12 @@ const CurrentlyPlaying: React.FC = () => {
 
   return (
     <div className="[ Spotify ][ CurrentlyPlaying ] md:p-4 font-roboto">
-      <div className="[ Spotify ][ CurrentlyPlaying__Container ] md:mx-auto shadow-md rounded-lg border-dc-grey dark:border-white border-2">
+      <div className="[ Spotify ][ CurrentlyPlaying__Container ] md:mx-auto border-dc-grey dark:border-white border-2">
         {data?.isPlaying ? (
           <div className="[ Spotify ][ CurrentlyPlaying__IsPlaying ] grid grid-flow-row md:grid-cols-5 grid-cols-3 grid-rows-1 space-x-2">
             <div className="[ Spotify ][ CurrentlyPlaying__TrackAlbumImage ]">
               <img
-                className="[ Spotify ][ CurrentlyPlaying__Text ] max-h-full max-w-full h-auto w-auto rounded-l-md"
+                className="[ Spotify ][ CurrentlyPlaying__Text ] max-h-full max-w-full h-auto w-auto"
                 src={data.albumImageUrl}
                 alt={`${data.title}-img`}
               />

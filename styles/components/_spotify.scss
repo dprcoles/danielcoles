@@ -1,3 +1,7 @@
+.CurrentlyPlaying__Container {
+  box-shadow: 8px 8px 1px 1px var(--borderColor); 
+}
+
 /*** Common browsers ***/
 .CurrentlyPlaying__Text::selection {
   background-color: var(--highlightBgColor);

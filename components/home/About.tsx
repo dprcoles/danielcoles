@@ -1,4 +1,4 @@
-import { firstName, employer, jobTitle, games } from '@/utils/constants'
+import { firstName, employer, jobTitle, games, location } from '@/utils/constants'
 
 const About: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const About: React.FC = () => {
         About Me
       </div>
       <div className="font-roboto relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4">
-        <div className="[ About__Article ][ Intro ] p-4 col-start-1 col-end-1">
+        <div className="[ About__Article ][ Intro ] p-4 col-start-1 col-end-1 border-2 border-dc-grey dark:border-white">
           <div className="[ About__Text ][ Heading ] text-2xl font-extrabold text-left pb-4">
             Who am I?
           </div>
@@ -24,7 +24,7 @@ const About: React.FC = () => {
             gaming, sometimes both! At the moment, I am really enjoying: {games.join(', ')}.
           </p>
           <p className="[ About__Text ][ Location ] font-bold text-lg text-left py-2">
-            I&apos;m currently based in Luton, England.
+            I&apos;m currently based in {location}.
           </p>
         </div>
       </div>
