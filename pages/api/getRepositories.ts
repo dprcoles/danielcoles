@@ -1,10 +1,5 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { getRepositories } from '@/utils/githubApi'
-
-type resType = {
-  status: (
-    arg0: number
-  ) => { (): any; new (): any; json: { (arg0: { repositories: any }): any; new (): any } }
-}
 
 type repoData = {
   name: string
@@ -15,7 +10,7 @@ type repoData = {
   stargazers_count: number
 }
 
-export default async (_: any, res: resType) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await getRepositories()
 
   const repos = await response.json()

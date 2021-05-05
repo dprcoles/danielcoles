@@ -31,7 +31,7 @@ const CurrentlyPlaying: React.FC = () => {
               <div className="[ Spotify ][ CurrentlyPlaying__TrackTitle ][ CurrentlyPlaying__Text ] font-extrabold text-lg md:text-3xl whitespace-nowrap overflow-hidden">
                 {data.title}
               </div>
-              <div className="[ Spotify ][ CurrentlyPlaying__TrackArtist ][ CurrentlyPlaying__Text ] font-bold text-base md:text-2xl whitespace-nowrap overflow-hidden">
+              <div className="[ Spotify ][ CurrentlyPlaying__TrackArtist ][ CurrentlyPlaying__Text ] font-bold text-base md:text-xl whitespace-nowrap overflow-hidden">
                 {data.artist}
               </div>
               <div className="[ Spotify ][ CurrentlyPlaying__TrackLink ] opacity-75">

@@ -1,18 +1,5 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { getTopTracks } from '@/utils/spotifyApi'
-
-type resType = {
-  setHeader: (arg0: string, arg1: string) => void
-  status: (
-    arg0: number
-  ) => {
-    (): any
-    new (): any
-    json: {
-      (arg0: { tracks: any }): any
-      new (): any
-    }
-  }
-}
 
 type trackType = {
   artists: any[]
@@ -22,7 +9,7 @@ type trackType = {
   name: any
 }
 
-export default async (_: any, res: resType) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await getTopTracks()
   const { items } = await response.json()
 
