@@ -7,14 +7,14 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/roboto-medium-webfont.woff2"
+            href="/fonts/ubuntu-medium-webfont.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/roboto-medium-webfont.woff"
+            href="/fonts/ubuntu-medium-webfont.woff"
             as="font"
             type="font/woff"
             crossOrigin="anonymous"
