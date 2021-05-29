@@ -9,7 +9,7 @@ type trackType = {
   name: any
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (_: NextApiRequest, res: NextApiResponse) => {
   const response = await getTopTracks()
   const { items } = await response.json()
 
