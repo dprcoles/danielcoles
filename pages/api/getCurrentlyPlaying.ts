@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getCurrentlyPlaying } from '@/utils/spotifyApi'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (_: NextApiRequest, res: NextApiResponse) => {
   const response = await getCurrentlyPlaying()
 
   if (response.status === 204 || response.status > 400)

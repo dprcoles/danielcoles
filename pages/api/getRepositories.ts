@@ -10,7 +10,7 @@ type repoData = {
   stargazers_count: number
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (_: NextApiRequest, res: NextApiResponse) => {
   const response = await getRepositories()
 
   const repos = await response.json()
