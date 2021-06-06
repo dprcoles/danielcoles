@@ -42,7 +42,7 @@
     "postcss": "^8.3.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.1.2",
+    "tailwindcss": "^2.1.4",
     "ts-loader": "^9.1.1",
     "webpack-cli": "^4.7.0"
   },
