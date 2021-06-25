@@ -4,7 +4,7 @@ import TopTracks from './TopTracks'
 const Spotify: React.FC = () => {
   return (
     <>
-      <div className="font-roboto relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4">
+      <div className="relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4">
         <div className="[ About__Article ][ Music ] p-4 col-start-2 col-end-2 border-2 border-dc-grey dark:border-white">
           <div className="[ About__Text ][ Heading ] text-2xl font-extrabold text-left pb-4">
             Music!

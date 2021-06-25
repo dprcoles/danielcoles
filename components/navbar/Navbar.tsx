@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             <li className="[ Navbar__Item ][ Dashboard__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/dashboard">
                 <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
                   aria-label="Go to Dashboard"
                 >
                   Dashboard
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             <li className="[ Navbar__Item ][ Projects__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/projects">
                 <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
                   aria-label="Go to Projects"
                 >
                   Projects
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             <li className="[ Navbar__Item ][ Experience__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/experience">
                 <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
                   aria-label="Go to Experience"
                 >
                   Experience
@@ -82,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             <li className="[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/tech">
                 <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-roboto font-bold"
+                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
                   aria-label="Go to Tech"
                 >
                   Tech

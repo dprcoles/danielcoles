@@ -19,9 +19,6 @@ module.exports = {
         'pastel-yellow': '#FDFD96',
         'pastel-green': '#77DD77',
       },
-      fontFamily: {
-        roboto: ['ubuntu'],
-      },
     },
   },
   variants: {

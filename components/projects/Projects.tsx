@@ -17,7 +17,7 @@ type repositoryData = {
 const Projects: React.FC = () => {
   const { data } = useSWR<repositoriesData>('/api/getRepositories', fetcher)
   return (
-    <div className="container font-roboto mx-auto my-auto text-dc-grey dark:text-white">
+    <div className="container mx-auto my-auto text-dc-grey dark:text-white">
       <div className="[ Projects__Text ] font-extrabold text-7xl text-left self-center pb-4">
         Projects
       </div>

@@ -14,19 +14,19 @@ const Hero: React.FC<HeroProps> = ({ firstName, lastName, jobTitle }) => {
           <MiniMe />
         </div>
         <div className="[ Hero__Message ] self-center">
-          <div className="[ Hero__Text ][ Greeting ] text-2xl md:text-3xl font-semibold font-roboto pb-2">
+          <div className="[ Hero__Text ][ Greeting ] text-2xl md:text-3xl font-semibold pb-2">
             <span role="img" aria-label="waving-emoji">
               👋
             </span>{' '}
             Hey, I&apos;m
           </div>
-          <div className="[ Hero__Text ][ FirstName ] text-8xl md:text-9xl font-extrabold font-roboto">
+          <div className="[ Hero__Text ][ FirstName ] text-8xl md:text-9xl font-extrabold">
             {firstName}
           </div>
-          <div className="[ Hero__Text ][ LastName ] text-8xl md:text-9xl font-extrabold font-roboto">
+          <div className="[ Hero__Text ][ LastName ] text-8xl md:text-9xl font-extrabold">
             {lastName}
           </div>
-          <div className="[ Hero__Text ][ JobTitle ] text-4xl md:text-5xl font-semibold font-roboto">
+          <div className="[ Hero__Text ][ JobTitle ] text-4xl md:text-5xl font-semibold">
             {jobTitle}
           </div>
         </div>

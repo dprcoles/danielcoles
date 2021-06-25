@@ -13,7 +13,7 @@ const CurrentlyPlaying: React.FC = () => {
   const { data } = useSWR<currentlyPlayingData>('/api/getCurrentlyPlaying', fetcher)
 
   return (
-    <div className="[ Spotify ][ CurrentlyPlaying ] md:p-4 font-roboto">
+    <div className="[ Spotify ][ CurrentlyPlaying ] md:p-4">
       <div className="[ Spotify ][ CurrentlyPlaying__Container ] md:mx-auto border-dc-grey dark:border-white border-2">
         {data?.isPlaying ? (
           <div className="[ Spotify ][ CurrentlyPlaying__IsPlaying ] grid grid-flow-row md:grid-cols-5 grid-cols-3 grid-rows-1 space-x-2">

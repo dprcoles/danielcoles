@@ -3,10 +3,10 @@ import { firstName, employer, jobTitle, games, location } from '@/utils/constant
 const About: React.FC = () => {
   return (
     <>
-      <div className="[ About__Title ][ About__Text ] font-roboto font-extrabold text-7xl text-left py-10">
+      <div className="[ About__Title ][ About__Text ] font-extrabold text-7xl text-left py-10">
         About Me
       </div>
-      <div className="font-roboto relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4">
+      <div className="relative md:grid md:grid-flow-row md:grid-cols-2 md:p-4 py-4 md:space-x-4 md:space-y-4">
         <div className="[ About__Article ][ Intro ] p-4 col-start-1 col-end-1 border-2 border-dc-grey dark:border-white">
           <div className="[ About__Text ][ Heading ] text-2xl font-extrabold text-left pb-4">
             Who am I?
