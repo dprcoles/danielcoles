@@ -26,7 +26,7 @@ const getAccessToken = async () => {
   return response.json()
 }
 
-export const getCurrentlyPlaying = async () => {
+export const getCurrentlyPlaying = async (): Promise<Response> => {
   const { access_token } = await getAccessToken()
 
   return fetch(CURRENTLY_PLAYING_BASE_URL, {
@@ -37,7 +37,7 @@ export const getCurrentlyPlaying = async () => {
   })
 }
 
-export const getTopTracks = async () => {
+export const getTopTracks = async (): Promise<Response> => {
   const { access_token } = await getAccessToken()
 
   return fetch(TOP_TRACKS_BASE_URL, {

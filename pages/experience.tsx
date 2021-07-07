@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import Wrapper from '@/components/Wrapper'
 import { Experience } from '@/components/experience'
 
-export default function experience() {
+export const ExperiencePage: NextPage = () => {
   return (
     <Wrapper>
       <div className="py-36">
@@ -10,3 +11,5 @@ export default function experience() {
     </Wrapper>
   )
 }
+
+export default ExperiencePage
