@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import Wrapper from '@/components/Wrapper'
 import { Dashboard } from '@/components/dashboard'
 
-export default function dashboard() {
+export const DashboardPage: NextPage = () => {
   return (
     <div>
       <Wrapper>
@@ -12,3 +13,5 @@ export default function dashboard() {
     </div>
   )
 }
+
+export default DashboardPage

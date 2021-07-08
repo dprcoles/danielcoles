@@ -1,8 +1,9 @@
 import Wrapper from '@/components/Wrapper'
 import { About, Hero, Spotify } from '@/components/home'
 import { firstName, lastName, jobTitle } from '../utils/constants'
+import { NextPage } from 'next'
 
-export default function Home() {
+export const HomePage: NextPage = () => {
   return (
     <Wrapper>
       <div>
@@ -17,3 +18,5 @@ export default function Home() {
     </Wrapper>
   )
 }
+
+export default HomePage

@@ -14,7 +14,7 @@ const TopTracks: React.FC = () => {
   const { data } = useSWR<topTracksData>('/api/getTopTracks', fetcher)
 
   return (
-    <div className="[ Spotify ][ TopTracks ] p-4 font-roboto">
+    <div className="[ Spotify ][ TopTracks ] p-4">
       <div className="[ Spotify ][ TopTracks__Text ] text-2xl font-extrabold pb-4">
         My top 10 songs on Spotify
       </div>
