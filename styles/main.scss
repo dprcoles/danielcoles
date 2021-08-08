@@ -23,7 +23,7 @@ body {
 }
 
 :root {
-  --backgroundColor: theme('colors.white');
+  --backgroundColor: theme('colors.light-grey');
   --heroColor: theme('colors.light-hero');
   --logoColor: theme('colors.dc-grey');
   --borderColor: theme('colors.dc-grey');
@@ -32,7 +32,7 @@ body {
   --hoodieColor: theme('colors.alt-grey');
   --hoodieLogoColor: theme('colors.black');
 
-  --highlightBgColor: theme('colors.white');
+  --highlightBgColor: theme('colors.dc-grey');
   --heroHighlightColor: theme('colors.light-hero');
   --aboutHighlightColor: theme('colors.light-about');
   --spotifyHighlightColor: theme('colors.light-about');
@@ -74,4 +74,18 @@ html {
     background-color: var(--heroColor);
     z-index: -2;
   }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
 }

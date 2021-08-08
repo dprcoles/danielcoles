@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ firstName, lastName, jobTitle }) => {
         </div>
         <div className="[ Hero__Message ] self-center">
           <div className="[ Hero__Text ][ Greeting ] text-2xl md:text-3xl font-semibold pb-2">
-            <span role="img" aria-label="waving-emoji">
+            <span className="[ Hero__Text ]" role="img" aria-label="waving-emoji">
               👋
             </span>{' '}
             Hey, I&apos;m

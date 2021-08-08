@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       </div>
       {data?.repositories.map((repo: repositoryData, index: number) => (
         <a key={index} href={repo.html_url} target="_blank" rel="noreferrer">
-          <div className="[ Projects ] p-2 m-4 border-2 border-dc-grey dark:border-white hover:bg-gray-200 dark:hover:bg-black">
+          <div className="[ Projects ] p-2 m-4 border-2 border-dc-grey dark:border-white hover:bg-white dark:hover:bg-black">
             <div className="grid grid-cols-2 grid-flow-row pb-2">
               <div className="[ Projects__Text ] text-4xl font-extrabold">{repo.name}</div>
               <div className="[ Projects__Text ] text-xl font-bold text-right">{repo.language}</div>
