@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="[ Socials ][ LinkedIn ] self-center justify-self-center">
               <a href={footerData.socials.linkedin} target="_blank" rel="noreferrer">
-                <FaLinkedinIn className="hover:text-blue-800" title="Follow me on LinkedIn" />
+                <FaLinkedinIn className="hover:text-blue-700" title="Follow me on LinkedIn" />
               </a>
             </div>
             <div className="[ Socials ][ Twitter ] self-center justify-self-center">

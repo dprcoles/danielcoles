@@ -6,7 +6,7 @@ export const jobTitle = 'Software Engineer'
 export const employer = "Sainsbury's Tech"
 export const location = 'Luton, England'
 
-export const games = ['League of Legends', 'Hearthstone']
+export const games = ['League of Legends']
 
 export const footerData = {
   socials: {
