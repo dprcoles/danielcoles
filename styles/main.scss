@@ -2,19 +2,27 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import '~@fontsource/ubuntu/400.css';
+@import '~@fontsource/ubuntu/500.css';
+@import '~@fontsource/ubuntu/700.css';
+
+@import '~@fontsource/baloo-da-2/500.css';
+
 @import 'components';
 
-@font-face {
-  font-family: 'ubuntu';
-  src: url(/fonts/ubuntu-medium-webfont.woff2) format('woff2'),
-    url(/fonts/ubuntu-medium-webfont.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
-  font-family: 'ubuntu';
+  .text-2xl,
+  .text-3xl,
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl,
+  .text-8xl,
+  .text-9xl {
+    font-family: 'Ubuntu';
+  }
+
+  font-family: 'Baloo Da 2';
 }
 
 .First-Section {
@@ -28,6 +36,9 @@ body {
   --logoColor: theme('colors.dc-grey');
   --borderColor: theme('colors.dc-grey');
 
+  --homeHoverColor: theme('colors.light-home-hover');
+  --defaultHoverColor: theme('colors.light-default-hover');
+
   --backgroundSplashColor: theme('colors.light-about');
   --hoodieColor: theme('colors.alt-grey');
   --hoodieLogoColor: theme('colors.black');
@@ -38,6 +49,8 @@ body {
   --spotifyHighlightColor: theme('colors.light-about');
   --footerHighlightColor: theme('colors.dc-grey');
   --projectsBorderColor: theme('colors.dc-grey');
+
+  --scrollBarTrackColor: theme('colors.light-scrollbar-track');
 }
 
 [class='dark'] {
@@ -45,6 +58,9 @@ body {
   --heroColor: theme('colors.dark-hero');
   --logoColor: theme('colors.white');
   --borderColor: theme('colors.white');
+
+  --homeHoverColor: theme('colors.dark-home-hover');
+  --defaultHoverColor: theme('colors.dark-default-hover');
 
   --backgroundSplashColor: theme('colors.dark-about');
   --hoodieColor: theme('colors.dark-alt-grey');
@@ -56,6 +72,8 @@ body {
   --spotifyHighlightColor: theme('colors.white');
   --footerHighlightColor: theme('colors.white');
   --projectsBorderColor: theme('colors.white');
+
+  --scrollBarTrackColor: theme('colors.dark-scrollbar-track');
 }
 
 html {
@@ -81,11 +99,10 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
-  border-radius: 100px;
+  background-color: var(--scrollBarTrackColor);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d4aa70;
-  border-radius: 100px;
+  background-color: var(--heroColor);
+  border-radius: 80px;
 }

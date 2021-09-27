@@ -13,9 +13,12 @@
   display: block;
 }
 
-.Navbar__Text:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+.Navbar__Text-Home:hover {
+  background-color: var(--homeHoverColor);
+}
+
+.Navbar__Text-Default:hover {
+  background-color: var(--defaultHoverColor);
 }
 
 /*** Common browsers ***/
