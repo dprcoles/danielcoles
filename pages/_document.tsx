@@ -5,20 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="preload"
-            href="/fonts/ubuntu-medium-webfont.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="/fonts/ubuntu-medium-webfont.woff"
-            as="font"
-            type="font/woff"
-            crossOrigin="anonymous"
-          />
           <link rel="icon" href="/logo.svg" />
           <link rel="shortcut icon" href="/logo.svg" />
           <link rel="apple-touch-icon" href="/logo.svg" sizes="180x180" />
