@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import { FaSun, FaMoon, FaBars } from 'react-icons/fa'
 import Logo from './Logo'
 
@@ -10,6 +11,11 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
   const [menuIsActive, setMenuIsActive] = useState(false)
+
+  const router = useRouter()
+  const type = router.pathname === '/' ? 'Home' : 'Default'
+
+  const itemClass = `[ Navbar__Text-${type} ] text-base md:text-lg font-bold p-2 rounded-md`
 
   return (
     <header
@@ -52,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             <li className="[ Navbar__Item ][ Dashboard__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/dashboard">
                 <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
+                  className={`[ Navbar__Text-${type} ] text-base md:text-lg font-bold p-2 rounded-md`}
                   aria-label="Go to Dashboard"
                 >
                   Dashboard
@@ -61,41 +67,35 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
             </li>
             <li className="[ Navbar__Item ][ Projects__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/projects">
-                <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
-                  aria-label="Go to Projects"
-                >
+                <a className={itemClass} aria-label="Go to Projects">
                   Projects
                 </a>
               </NextLink>
             </li>
             <li className="[ Navbar__Item ][ Experience__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/experience">
-                <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
-                  aria-label="Go to Experience"
-                >
+                <a className={itemClass} aria-label="Go to Experience">
                   Experience
                 </a>
               </NextLink>
             </li>
             <li className="[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center">
               <NextLink href="/tech">
-                <a
-                  className="[ Navbar__Text ] text-base md:text-lg font-bold"
-                  aria-label="Go to Tech"
-                >
+                <a className={itemClass} aria-label="Go to Tech">
                   Tech
                 </a>
               </NextLink>
             </li>
-            <li className="[ Navbar__Item ][ Tech__Link ] md:px-4 py-2 self-center text-left md:text-center">
+            <li className="[ Navbar__Item ] md:px-4 py-2 self-center text-left md:text-center">
               <button
                 aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                 type="button"
                 title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-                className="self-center p-2 hidden md:flex"
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className={`[ Navbar__Text-${type} ] self-center p-2 hidden md:flex rounded-md`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setTheme(theme === 'dark' ? 'light' : 'dark')
+                }}
               >
                 {theme === 'dark' ? <FaSun /> : <FaMoon />}
               </button>

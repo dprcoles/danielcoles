@@ -1,27 +1,68 @@
 const Logo: React.FC = () => {
   return (
     <svg
-      width="50"
-      height="50"
-      viewBox="0 0 100 100"
+      width="80"
+      height="80"
+      viewBox="0 0 650 650"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0)">
-        <path
-          className="[ Navbar__Logo ]"
-          d="M50 50C50 20 16.6667 20 0 20C6.66667 21.0063 20 28.3774 20 49.8113C20 71.2453 6.66667 78.8679 0 80C16.6667 80 50 80 50 50Z"
-        />
-        <path
-          className="[ Navbar__Logo ]"
-          d="M50 50C50 20 83.3333 20 100 20C90 21.0063 70 28.3774 70 49.8113C70 71.2453 90 78.8679 100 80C83.3333 80 50 80 50 50Z"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0">
-          <rect width="100" height="100" fill="white" />
-        </clipPath>
-      </defs>
+      <rect
+        x="351.669"
+        y="156"
+        width="60"
+        height="200"
+        transform="rotate(30 351.669 156)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="251.669"
+        y="329.205"
+        width="60"
+        height="200"
+        transform="rotate(-60 251.669 329.205)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="321.669"
+        y="207.962"
+        width="60"
+        height="200"
+        transform="rotate(-60 321.669 207.962)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="296.244"
+        y="124"
+        width="60"
+        height="200"
+        transform="rotate(30 296.244 124)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="140"
+        y="114.622"
+        width="60"
+        height="60"
+        transform="rotate(30 140 114.622)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="75"
+        y="227.205"
+        width="60"
+        height="200"
+        transform="rotate(-60 75 227.205)"
+        className="[ Navbar__Logo ]"
+      />
+      <rect
+        x="145"
+        y="105.962"
+        width="60"
+        height="200"
+        transform="rotate(-60 145 105.962)"
+        className="[ Navbar__Logo ]"
+      />
     </svg>
   )
 }
