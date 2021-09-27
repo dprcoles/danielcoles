@@ -15,7 +15,7 @@
     "@fontsource/baloo-da-2": "^4.5.0",
     "@fontsource/ubuntu": "^4.5.0",
     "autoprefixer": "^10.2.5",
-    "gsap": "^3.6.0",
+    "gsap": "^3.7.1",
     "next": "^11.1.0",
     "next-themes": "0.0.14",
     "react": "17.0.2",
