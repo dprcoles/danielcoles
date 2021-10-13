@@ -1,7 +1,6 @@
-import React from 'react'
-import { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
-import '@/styles/main.scss'
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
+import "@/styles/globals.css";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -10,5 +9,4 @@ function App({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   )
 }
-
-export default App
+export default App;

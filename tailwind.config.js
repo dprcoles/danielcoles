@@ -1,30 +1,40 @@
-const purgeEnabled = process.env.NODE_ENV === 'production'
+const defaultTheme = require("tailwindcss/defaultTheme")
+const colors = require("tailwindcss/colors")
 
 module.exports = {
-  purge: {
-    enabled: purgeEnabled,
-    content: ['./components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
-  },
-  darkMode: 'class',
+  mode: "jit",
+  purge: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts}",
+    "safelist.txt",
+  ],
+  darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Noto Sans Display", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
-        'light-grey': '#F6F4F6',
-        'dc-grey': '#404040',
-        'alt-grey': '#AFB1B1',
-        'dark-alt-grey': '#262528',
-        'light-about': '#A7C7E7',
-        'dark-about': '#23395D',
-        'light-hero': '#FFD1DC',
-        'light-home-hover': '#FFB8C9',
-        'light-default-hover': '#E6E6E6',
-        'dark-hero': '#9673A6',
-        'dark-home-hover': '#A283B0',
-        'dark-default-hover': '#4C4A50',
-        'pastel-yellow': '#FDFD96',
-        'pastel-green': '#77DD77',
-        'light-scrollbar-track': '#FFF',
-        'dark-scrollbar-track': '#404040',
+        orange: colors.orange,
+        rose: colors.rose,
+        violet: colors.violet,
+        javascript: {
+          bg: "#F1E05A",
+          ring: "#CFC04C",
+        },
+        go: {
+          bg: "#00A3CC",
+          ring: "#00CCFF",
+        },
+        rust: {
+          bg: "#DEA584",
+          ring: "#A87D63",
+        },
+        typescript: {
+          bg: "#2B7489",
+          ring: "#1A4754",
+        },
       },
     },
   },
