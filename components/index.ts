@@ -1,9 +1,7 @@
-export * from './dashboard'
-export * from './experience'
-export * from './footer'
-export * from './home'
-export * from './navbar'
-export * from './projects'
-export * from './tech'
-
-export { default as Wrapper } from './Wrapper'
+export { default as About } from "./About"
+export { default as Button } from "./Button"
+export { default as LanguagePill } from "./LanguagePill"
+export { default as Logo } from "./Logo"
+export { default as MiniMe } from "./MiniMe"
+export { default as ProjectCard } from "./ProjectCard"
+export { default as TrackCard } from "./TrackCard"

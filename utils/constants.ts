@@ -1,107 +1,142 @@
-export const firstName = 'Daniel'
-export const lastName = 'Coles'
-export const fullName = `${firstName} ${lastName}`
-export const email = 'me@danielcoles.co.uk'
-export const jobTitle = 'Software Engineer'
-export const employer = "Sainsbury's Tech"
-export const location = 'Luton, England'
+import { ColourThemeType } from "@/types/Notation"
 
-export const games = ['League of Legends']
+export const LIGHT_THEME_COLOURS: Array<ColourThemeType> = [
+  {
+    hex: "#36A3EB",
+    colour: "blue",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#161D6F",
+    colour: "blue-dark",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#B5DEFF",
+    colour: "blue-light",
+    types: ["highlight"],
+  },
+  {
+    hex: "#84D270",
+    colour: "green",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#C1FFD7",
+    colour: "green-light",
+    types: ["highlight"],
+  },
+  {
+    hex: "#FF884B",
+    colour: "orange",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#FBACCC",
+    colour: "pink",
+    types: ["box", "bracket", "highlight", "underline"],
+  },
+  {
+    hex: "#FFCCCC",
+    colour: "peach",
+    types: ["highlight"],
+  },
+  {
+    hex: "#D78BFF",
+    colour: "purple",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#241E92",
+    colour: "purple-dark",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#C9CBFF",
+    colour: "purple-light",
+    types: ["highlight"],
+  },
+  {
+    hex: "#FF7171",
+    colour: "red",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#C70039",
+    colour: "red-dark",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#36B5B0",
+    colour: "turquoise",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#E8E46E",
+    colour: "yellow",
+    types: ["highlight"],
+  },
+]
 
-export const footerData = {
-  socials: {
-    mail: 'mailto:me@danielcoles.co.uk',
-    spotify: 'https://open.spotify.com/user/icolesyy',
-    linkedin: 'https://www.linkedin.com/in/danielcoles/',
-    github: 'https://github.com/dcolesDEV',
-    twitter: 'https://twitter.com/_danielcoles',
+export const DARK_THEME_COLOURS: Array<ColourThemeType> = [
+  {
+    hex: "#3282B8",
+    colour: "blue",
+    types: ["box", "bracket", "highlight", "underline"],
   },
-  developedBy: {
-    name: 'Daniel Coles',
-    link: 'https://github.com/dcolesDEV/danielcoles',
+  {
+    hex: "#32E0C4",
+    colour: "cyan",
+    types: ["box", "bracket", "underline"],
   },
-  builtIn: {
-    name: 'Next.js',
-    link: 'https://nextjs.org/',
+  {
+    hex: "#044343",
+    colour: "green",
+    types: ["highlight"],
   },
-  hostedOn: {
-    name: 'Vercel',
-    link: 'https://vercel.com/',
+  {
+    hex: "#00FF00",
+    colour: "lime",
+    types: ["box"],
   },
-  inspiredBy: {
-    name: 'Cassie Evans',
-    link: 'https://www.cassie.codes/',
+  {
+    hex: "#FF00BF",
+    colour: "magenta",
+    types: ["box", "bracket", "underline"],
   },
-}
-
-export const experience = {
-  summary: '',
-  qualifications: [
-    {
-      name: 'Dell EMC Data Scientist Associate',
-      badge: '',
-      completed: true,
-    },
-    {
-      name: 'BCS Level 4 Data Analyst',
-      badge: '',
-      completed: false,
-    },
-    {
-      name: 'A-Level Business Studies, Computer Science, Economics',
-      badge: '',
-      completed: true,
-    },
-  ],
-  roles: [
-    {
-      jobTitle: 'Software Developer',
-      type: 'Full-Time',
-      started: 'Nov 2020',
-      ended: 'Present',
-      summary: '',
-      bullets: [],
-    },
-    {
-      jobTitle: 'Insights Specialist',
-      type: 'Full-Time',
-      started: 'Apr 2020',
-      ended: 'Nov 2020',
-      summary: '',
-      bullets: [],
-    },
-    {
-      jobTitle: 'Retail Analyst',
-      type: 'Full-Time',
-      started: 'Apr 2019',
-      ended: 'Apr 2020',
-      summary: '',
-      bullets: [],
-    },
-    {
-      jobTitle: 'Regional Recruitment Co-ordinator',
-      type: 'Secondment',
-      started: 'Jun 2017',
-      ended: 'Apr 2019',
-      summary: '',
-      bullets: [],
-    },
-
-    {
-      jobTitle: 'Customer Service Team Leader',
-      type: 'Part-Time',
-      started: 'Jun 2017',
-      ended: 'Apr 2019',
-      summary: '',
-      bullets: [],
-    },
-    {
-      jobTitle: 'Customer Service Advisor',
-      type: 'Part-Time',
-      started: 'Sep 2016',
-      ended: 'Jun 2017',
-      summary: '',
-      bullets: [],
-    },
-  ],
-}
+  {
+    hex: "#D65A31",
+    colour: "orange",
+    types: ["box", "bracket", "highlight", "underline"],
+  },
+  {
+    hex: "#E63E6D",
+    colour: "pink",
+    types: ["box", "bracket", "highlight", "underline"],
+  },
+  {
+    hex: "#ECA0B6",
+    colour: "pink-light",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#C400C6",
+    colour: "purple",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#9673A6",
+    colour: "purple-dark",
+    types: ["highlight"],
+  },
+  {
+    hex: "#D92027",
+    colour: "red",
+    types: ["box", "bracket", "underline"],
+  },
+  {
+    hex: "#FFD31D",
+    colour: "yellow",
+    types: ["box", "bracket", "underline"],
+  },
+]

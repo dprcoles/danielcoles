@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getRepositories } from '@/utils/githubApi'
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getRepositories } from "@/utils/api/github"
 
 type repoData = {
   name: string
@@ -10,7 +10,7 @@ type repoData = {
   stargazers_count: number
 }
 
-export default async (_: NextApiRequest, res: NextApiResponse) => {
+const get = async (_: NextApiRequest, res: NextApiResponse) => {
   const response = await getRepositories()
 
   const repos = await response.json()
@@ -26,3 +26,5 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
 
   return res.status(200).json({ repositories })
 }
+
+export default get
