@@ -4,10 +4,12 @@ import useSWR from "swr"
 import fetcher from "@/utils/api/fetcher"
 import { CurrentlyPlayingData } from "@/types/SpotifyData"
 
-const CurrentlyPlaying: React.FC = () => {
-  const { data } = useSWR<CurrentlyPlayingData>("/api/getCurrentlyPlaying", fetcher)
+interface CurrentlyPlayingProps {
+  data: CurrentlyPlayingData
+}
 
-  if (!data) return null
+const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
+  if (!data.isPlaying) return null
 
   return (
     <div className="[ CurrentlyPlaying ]">
