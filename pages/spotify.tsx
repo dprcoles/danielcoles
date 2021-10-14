@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import { Wrapper } from "@/components/layout"
 import fetcher from "@/utils/api/fetcher"
 import { TopTracksData, TrackData } from "@/types/SpotifyData"
-import { TrackCard } from "@/components/index"
+import { TrackCard, CurrentlyPlaying } from "@/components/index"
 import { RoughNotationGroup } from "react-rough-notation"
 import { Underline } from "@/components/notations"
 import { shuffledColours } from "@/utils/helpers"
@@ -30,6 +30,9 @@ const Spotify: NextPage = () => {
             now.
           </div>
         </RoughNotationGroup>
+        <div className="p-4">
+          <CurrentlyPlaying />
+        </div>
         <div className="pt-4">
           {data?.tracks.map((track: TrackData, index: number) => (
             <div key={index} className="[ Track ]">

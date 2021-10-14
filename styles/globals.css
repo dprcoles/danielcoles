@@ -24,3 +24,51 @@
   background-color: var(--selectionBackgroundColour);
   color: var(--selectionTextColour);
 }
+
+.spotify__currently-playing {
+  background: linear-gradient(
+    270deg,
+    theme("colors.green.300"),
+    theme("colors.green.400"),
+    theme("colors.green.500")
+  );
+  background-size: 600% 600%;
+
+  -webkit-animation: currently-playing 5s ease infinite;
+  -moz-animation: currently-playing 5s ease infinite;
+  animation: currently-playing 5s ease infinite;
+}
+
+@-webkit-keyframes currently-playing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes currently-playing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes currently-playing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

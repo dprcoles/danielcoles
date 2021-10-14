@@ -16,6 +16,7 @@ module.exports = {
         sans: ["Noto Sans Display", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        green: colors.green,
         orange: colors.orange,
         rose: colors.rose,
         violet: colors.violet,
