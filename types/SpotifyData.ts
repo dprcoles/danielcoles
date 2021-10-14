@@ -26,3 +26,11 @@ export type ArtistsData = {
   type: string
   uri: string
 }
+
+export type CurrentlyPlayingData = {
+  isPlaying: boolean
+  albumImageUrl: string
+  title: string
+  artist: string
+  trackUrl: string
+}
