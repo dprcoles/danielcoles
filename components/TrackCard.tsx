@@ -6,14 +6,15 @@ interface TrackCardProps {
   track: TrackData
   rank: number
   notationColour: string
+  order: number
 }
 
-const TrackCard: React.FC<TrackCardProps> = ({ track, rank, notationColour }) => {
+const TrackCard: React.FC<TrackCardProps> = ({ track, rank, notationColour, order }) => {
   return (
     <div className="flex py-4 space-x-4">
       <div className="text-lg font-bold p-2">
         {
-          <Box colour={notationColour} order={1} show duration={1000}>
+          <Box colour={notationColour} order={order} duration={300}>
             {(rank + 1).toString().padStart(2, "0")}
           </Box>
         }

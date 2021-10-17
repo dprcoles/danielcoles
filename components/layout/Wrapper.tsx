@@ -1,6 +1,7 @@
-import { useRouter } from "next/dist/client/router"
-import Head from "next/head"
 import React from "react"
+import Head from "next/head"
+import { motion } from "framer-motion"
+import { useRouter } from "next/dist/client/router"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
@@ -46,9 +47,11 @@ const Wrapper: React.FC<WrapperProps> = ({ children, page }) => {
       </Head>
       <div className="[ Wrapper ]">
         <Navbar />
-        <main className="[ Main ]">
-          <div className="max-w-4xl mx-auto mt-16 antialiased px-2 md:px-0 pb-16">{children}</div>
-        </main>
+        <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+          <main className="[ Main ]">
+            <div className="max-w-4xl mx-auto mt-16 antialiased px-2 md:px-0 pb-16">{children}</div>
+          </main>
+        </motion.div>
         <Footer />
       </div>
     </div>

@@ -7,39 +7,12 @@ const Logo: React.FC = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="204.937" y="0.602539" width="60" height="200" className="fill-current" />
-      <rect
-        x="204.937"
-        y="200.603"
-        width="60"
-        height="200"
-        transform="rotate(-90 204.937 200.603)"
+      <path
+        d="M205.937 1.10254H205.437V1.60254V61.6025V62.1025V141.103V141.603V201.603V202.103H205.937H265.937H266.437H405.937H406.437V201.603V141.603V141.103H405.937H266.437V62.1025H405.937H406.437V61.6025V1.60254V1.10254H405.937H266.437H265.937H205.937Z"
         className="fill-current"
       />
-      <rect
-        x="204.937"
-        y="60.6025"
-        width="60"
-        height="200"
-        transform="rotate(-90 204.937 60.6025)"
-        className="fill-current"
-      />
-      <rect x="140.937" y="0.602539" width="60" height="200" className="fill-current" />
-      <rect x="0.937134" y="70.6025" width="60" height="60" className="fill-current" />
-      <rect
-        x="0.937134"
-        y="200.603"
-        width="60"
-        height="200"
-        transform="rotate(-90 0.937134 200.603)"
-        className="fill-current"
-      />
-      <rect
-        x="0.937134"
-        y="60.6025"
-        width="60"
-        height="200"
-        transform="rotate(-90 0.937134 60.6025)"
+      <path
+        d="M1.93713 71.1025H1.43713V71.6025V131.603V132.103H1.93713H61.9371H62.4371V131.603V71.6025V71.1025H61.9371H1.93713ZM141.437 1.10254H1.93713H1.43713V1.60254V61.6025V62.1025H1.93713H141.437V141.103H1.93713H1.43713V141.603V201.603V202.103H1.93713H141.437H141.937H201.937H202.437V201.603V141.603V141.103V62.1025V61.6025V1.60254V1.10254H201.937H141.937H141.437Z"
         className="fill-current"
       />
     </svg>
