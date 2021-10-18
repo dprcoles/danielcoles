@@ -1,13 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Head from "next/head"
 import { motion } from "framer-motion"
 import { useRouter } from "next/dist/client/router"
 import Footer from "./Footer"
+import AnimatedNavbar from "./AnimatedNavbar"
 import Navbar from "./Navbar"
 
 interface WrapperProps {
   children?: React.ReactNode
   page: string
+  appMounted: boolean
 }
 
 const meta = {
@@ -21,8 +23,12 @@ const meta = {
   imageAlt: "Logo for danielcoles.dev",
 }
 
-const Wrapper: React.FC<WrapperProps> = ({ children, page }) => {
+const Wrapper: React.FC<WrapperProps> = ({ children, page, appMounted }) => {
+  const [initialLoad, setInitialLoad] = useState(true)
   const router = useRouter()
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => setInitialLoad(!appMounted), [])
 
   return (
     <div className="flex flex-col min-h-screen justify-between">
@@ -46,9 +52,9 @@ const Wrapper: React.FC<WrapperProps> = ({ children, page }) => {
         <meta name="twitter:image:alt" content={meta.imageAlt} />
       </Head>
       <div className="[ Wrapper ]">
-        <Navbar />
+        {initialLoad ? <AnimatedNavbar /> : <Navbar />}
         <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-          <main className="[ Main ]">
+          <main className="[ Main ] min-h-screen flex flex-col">
             <div className="max-w-4xl mx-auto mt-16 antialiased px-2 md:px-0 pb-16">{children}</div>
           </main>
         </motion.div>

@@ -1,21 +1,23 @@
 const Logo: React.FC = () => {
   return (
-    <svg
-      width="50"
-      height="24"
-      viewBox="0 0 400 200"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M205.937 1.10254H205.437V1.60254V61.6025V62.1025V141.103V141.603V201.603V202.103H205.937H265.937H266.437H405.937H406.437V201.603V141.603V141.103H405.937H266.437V62.1025H405.937H406.437V61.6025V1.60254V1.10254H405.937H266.437H265.937H205.937Z"
-        className="fill-current"
-      />
-      <path
-        d="M1.93713 71.1025H1.43713V71.6025V131.603V132.103H1.93713H61.9371H62.4371V131.603V71.6025V71.1025H61.9371H1.93713ZM141.437 1.10254H1.93713H1.43713V1.60254V61.6025V62.1025H1.93713H141.437V141.103H1.93713H1.43713V141.603V201.603V202.103H1.93713H141.437H141.937H201.937H202.437V201.603V141.603V141.103V62.1025V61.6025V1.60254V1.10254H201.937H141.937H141.437Z"
-        className="fill-current"
-      />
-    </svg>
+    <div>
+      <svg width="50" height="24" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M221 0.5H220.5V1V61V61.5V140.5V141V201V201.5H221H281H281.5H421H421.5V201V141V140.5H421H281.5V61.5H421H421.5V61V1V0.5H421H281.5H281H221Z"
+          strokeWidth="5"
+          strokeLinecap="square"
+          className="fill-current"
+          key="D"
+        />
+        <path
+          d="M1 70.5H0.5V71V131V131.5H1H61H61.5V131V71V70.5H61H1ZM140.5 0.5H1H0.5V1V61V61.5H1H140.5V140.5H1H0.5V141V201V201.5H1H140.5H141H201H201.5V201V141V140.5V61.5V61V1V0.5H201H141H140.5Z"
+          strokeWidth="5"
+          strokeLinecap="square"
+          className="fill-current"
+          key="C"
+        />
+      </svg>
+    </div>
   )
 }
 

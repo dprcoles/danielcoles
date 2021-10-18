@@ -1,4 +1,5 @@
 export { default as About } from "./About"
+export { default as AnimatedLogo } from "./AnimatedLogo"
 export { default as Button } from "./Button"
 export { default as CurrentlyPlaying } from "./CurrentlyPlaying"
 export { default as LanguagePill } from "./LanguagePill"

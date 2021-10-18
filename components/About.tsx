@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Bracket, Highlight, Underline } from "./notations"
 import MiniMe from "./MiniMe"
 import { shuffledColours } from "@/utils/helpers"
-import { FADE_IN, FADE_UP, STAGGER } from "@/utils/variants"
+import { FADE_IN, FADE_UP, MINI_ME_VARIANT, STAGGER } from "@/utils/variants"
 
 const About: React.FC = () => {
   const { resolvedTheme } = useTheme()
@@ -70,7 +70,7 @@ const About: React.FC = () => {
             </div>
           </RoughNotationGroup>
         </motion.div>
-        <motion.div variants={FADE_UP} className="flex-shrink-0">
+        <motion.div variants={MINI_ME_VARIANT} className="flex-shrink-0">
           <MiniMe />
         </motion.div>
       </div>

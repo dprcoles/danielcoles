@@ -34,9 +34,9 @@
   );
   background-size: 600% 600%;
 
-  -webkit-animation: currently-playing 5s ease infinite;
-  -moz-animation: currently-playing 5s ease infinite;
-  animation: currently-playing 5s ease infinite;
+  -webkit-animation: currently-playing 3s ease infinite;
+  -moz-animation: currently-playing 3s ease infinite;
+  animation: currently-playing 3s ease infinite;
 }
 
 @-webkit-keyframes currently-playing {
