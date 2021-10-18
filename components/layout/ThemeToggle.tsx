@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react"
 import { FaSun, FaMoon } from "react-icons/fa"
 import { useTheme } from "next-themes"
 import { AnimatePresence, motion } from "framer-motion"
-import { Button } from ".."
+import Button from "../Button"
 
-const ThemeToggle: React.FC = () => {
+interface ThemeToggleProps {
+  initial: boolean
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ initial }) => {
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
@@ -13,7 +17,7 @@ const ThemeToggle: React.FC = () => {
   const isDark = resolvedTheme === "dark"
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence exitBeforeEnter initial={initial}>
       <motion.span
         key={resolvedTheme}
         initial={{ x: 40, y: 40, rotate: 40, opacity: 0 }}
