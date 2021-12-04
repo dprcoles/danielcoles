@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           </NextLink>
           <div className="flex space-x-4">
             <NavbarLink href="/projects">Projects</NavbarLink>
-            <NavbarLink href="/spotify">Spotify</NavbarLink>
+            {/* <NavbarLink href="/spotify">Spotify</NavbarLink> */}
             <ThemeToggle initial={false} />
           </div>
         </div>
