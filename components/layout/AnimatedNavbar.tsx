@@ -28,11 +28,11 @@ const AnimatedNavbar: React.FC = () => {
                 Projects
               </motion.div>
             </NavbarLink>
-            <NavbarLink href="/spotify">
+            {/* <NavbarLink href="/spotify">
               <motion.div variants={FADE_DOWN} key="spotify">
                 Spotify
               </motion.div>
-            </NavbarLink>
+            </NavbarLink> */}
             <ThemeToggle initial />
           </motion.div>
         </div>
