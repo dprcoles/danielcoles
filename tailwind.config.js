@@ -1,9 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
-const colors = require("tailwindcss/colors")
 
 module.exports = {
-  mode: "jit",
-  purge: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./utils/**/*.{js,ts}",
@@ -16,10 +14,6 @@ module.exports = {
         sans: ["Noto Sans Display", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        green: colors.green,
-        orange: colors.orange,
-        rose: colors.rose,
-        violet: colors.violet,
         javascript: {
           bg: "#F1E05A",
           ring: "#CFC04C",
