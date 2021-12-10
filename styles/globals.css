@@ -10,21 +10,6 @@
   display: none;
 }
 
-:root {
-  --selectionBackgroundColour: theme("colors.rose.300");
-  --selectionTextColour: theme("colors.black");
-}
-
-[class="dark"] {
-  --selectionBackgroundColour: theme("colors.violet.500");
-  --selectionTextColour: theme("colors.white");
-}
-
-::selection {
-  background-color: var(--selectionBackgroundColour);
-  color: var(--selectionTextColour);
-}
-
 .spotify__currently-playing {
   background: linear-gradient(
     270deg,

@@ -31,7 +31,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children, page, appMounted }) => {
   useEffect(() => setInitialLoad(!appMounted), [])
 
   return (
-    <div className="flex flex-col min-h-screen justify-between">
+    <div className="selection:text-black selection:bg-rose-300 dark:selection:bg-violet-500 dark:selection:text-white flex flex-col min-h-screen justify-between">
       <Head>
         <title>
           {page} | {meta.title}
