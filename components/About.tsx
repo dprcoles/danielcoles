@@ -16,11 +16,13 @@ const About: React.FC = () => {
       <div className="md:flex mx-2 md:mx-0  md:space-x-4 item-center">
         <motion.div variants={STAGGER}>
           <RoughNotationGroup show>
-            <motion.div variants={FADE_IN} className="text-2xl lg:text-4xl font-extrabold">
-              Hey, I&apos;m{" "}
-              <Underline colour={underline[0]} order={1} duration={500}>
-                Daniel!
-              </Underline>{" "}
+            <motion.div variants={FADE_IN} className="text-2xl lg:text-4xl">
+              <span className="font-extrabold">
+                Hey, I&apos;m{" "}
+                <Underline colour={underline[0]} order={1} duration={500}>
+                  Daniel!
+                </Underline>
+              </span>{" "}
               👋
             </motion.div>
             <div className="mt-4">
