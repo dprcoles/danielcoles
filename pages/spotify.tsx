@@ -4,8 +4,8 @@ import useSWR from "swr"
 import { useTheme } from "next-themes"
 import { Wrapper } from "@/components/layout"
 import fetcher from "@/utils/api/fetcher"
-import { CurrentlyPlayingData, TopTracksData, TrackData } from "@/types/SpotifyData"
-import { TrackCard, CurrentlyPlaying } from "@/components/index"
+import { TopTracksData, TrackData } from "@/types/SpotifyData"
+import { TrackCard } from "@/components/index"
 import { RoughNotationGroup } from "react-rough-notation"
 import { Underline } from "@/components/notations"
 import { shuffledColours } from "@/utils/helpers"
@@ -15,20 +15,16 @@ import { PageInterface } from "@/types/PageInterface"
 
 const Spotify: NextPage<PageInterface> = ({ appMounted }) => {
   const [loaded, setLoaded] = useState(false)
-  const { data: trackData } = useSWR<TopTracksData>("/api/getTopTracks", fetcher)
-  const { data: playingData } = useSWR<CurrentlyPlayingData>("/api/getCurrentlyPlaying", fetcher)
+  const { data } = useSWR<TopTracksData>("/api/getTopTracks", fetcher)
 
   const { resolvedTheme } = useTheme()
   const { box, underline } = shuffledColours(resolvedTheme)
 
-  useEffect(() => (trackData && playingData ? setLoaded(true) : setLoaded(false)), [
-    trackData,
-    playingData,
-  ])
+  useEffect(() => (data ? setLoaded(true) : setLoaded(false)), [data])
 
   return (
     <Wrapper page="Spotify" appMounted={appMounted}>
-      {loaded && (
+      {loaded ? (
         <div className="[ Spotify ]">
           <RoughNotationGroup show={loaded}>
             <motion.div variants={FADE_IN} className="text-4xl font-extrabold">
@@ -41,12 +37,10 @@ const Spotify: NextPage<PageInterface> = ({ appMounted }) => {
               fine tuning my playlists with new finds! Below you can see a list of my top songs
               right now.
             </motion.div>
-            <motion.div variants={SLIDE_IN} className="p-4">
-              {playingData && <CurrentlyPlaying data={playingData} />}
-            </motion.div>
+            <motion.div variants={SLIDE_IN} className="p-4"></motion.div>
             <motion.div variants={STAGGER} className="pt-4">
-              {trackData &&
-                trackData.tracks.map((track: TrackData, index: number) => (
+              {data &&
+                data.tracks.map((track: TrackData, index: number) => (
                   <motion.div variants={FADE_IN} key={index} className="[ Track ]">
                     <TrackCard
                       track={track}
@@ -59,6 +53,12 @@ const Spotify: NextPage<PageInterface> = ({ appMounted }) => {
                 ))}
             </motion.div>
           </RoughNotationGroup>
+        </div>
+      ) : (
+        <div className="spinner">
+          <div className="first bg-dark dark:bg-white"></div>
+          <div className="second bg-dark dark:bg-white"></div>
+          <div className="bg-dark dark:bg-white"></div>
         </div>
       )}
     </Wrapper>

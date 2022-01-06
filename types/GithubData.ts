@@ -9,4 +9,6 @@ export type repositoryData = {
   description: string
   language: string
   stargazers_count: number
+  homepage: string
+  topics: Array<string>
 }
