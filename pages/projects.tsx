@@ -24,7 +24,7 @@ const Projects: NextPage<PageInterface> = ({ appMounted }) => {
 
   return (
     <Wrapper page="Projects" appMounted={appMounted}>
-      {loaded && (
+      {loaded ? (
         <div className="[ Projects ]">
           <RoughNotationGroup show={loaded}>
             <motion.div variants={FADE_IN} className="text-4xl font-extrabold">
@@ -58,6 +58,12 @@ const Projects: NextPage<PageInterface> = ({ appMounted }) => {
               ))}
             </motion.div>
           )}
+        </div>
+      ) : (
+        <div className="spinner">
+          <div className="first bg-dark dark:bg-white"></div>
+          <div className="second bg-dark dark:bg-white"></div>
+          <div className="bg-dark dark:bg-white"></div>
         </div>
       )}
     </Wrapper>

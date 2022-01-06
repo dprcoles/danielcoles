@@ -8,6 +8,8 @@ type repoData = {
   description: string
   language: string
   stargazers_count: number
+  homepage: string
+  topics: Array<string>
 }
 
 const get = async (_: NextApiRequest, res: NextApiResponse) => {
@@ -22,6 +24,8 @@ const get = async (_: NextApiRequest, res: NextApiResponse) => {
     description: repo.description,
     language: repo.language,
     stargazers_count: repo.stargazers_count,
+    homepage: repo.homepage,
+    topics: repo.topics
   }))
 
   return res.status(200).json({ repositories })

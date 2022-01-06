@@ -15,20 +15,20 @@ module.exports = {
       },
       colors: {
         javascript: {
-          bg: "#F1E05A",
-          ring: "#CFC04C",
+          from: "#F1E05A",
+          to: "#CFC04C",
         },
         go: {
-          bg: "#00A3CC",
-          ring: "#00CCFF",
+          from: "#00A3CC",
+          to: "#00CCFF",
         },
         rust: {
-          bg: "#DEA584",
-          ring: "#A87D63",
+          from: "#DEA584",
+          to: "#A87D63",
         },
         typescript: {
-          bg: "#2B7489",
-          ring: "#1A4754",
+          from: "#2B7489",
+          to: "#3693AD",
         },
       },
     },

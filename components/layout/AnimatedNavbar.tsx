@@ -10,7 +10,7 @@ const AnimatedNavbar: React.FC = () => {
   return (
     <motion.div initial="initial" animate="animate">
       <div className="top-0 z-20 py-2 md:py-6 md:mb-6 px-2 md:px-0 ">
-        <div className="container mx-auto lg:max-w-4xl md:flex md:items-center md:justify-between">
+        <div className="container flex mx-auto lg:max-w-4xl items-center justify-between">
           <NextLink href="/" scroll={false}>
             <a className="flex">
               <AnimatedLogo />

@@ -13,7 +13,7 @@ const About: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="md:flex space-x-4 item-center">
+      <div className="md:flex mx-2 md:mx-0  md:space-x-4 item-center">
         <motion.div variants={STAGGER}>
           <RoughNotationGroup show>
             <motion.div variants={FADE_IN} className="text-2xl lg:text-4xl font-extrabold">

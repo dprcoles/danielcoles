@@ -107,7 +107,7 @@ const MiniMe: React.FC = () => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 1120 1200"
+        viewBox="50 25 1100 1500"
         fill="none"
         className="md:p-2"
         xmlns="http://www.w3.org/2000/svg"
