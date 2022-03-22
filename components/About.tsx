@@ -39,14 +39,14 @@ const About: React.FC = () => {
                 </Highlight>{" "}
                 at{" "}
                 <a
-                  href="https://www.sainsburys.co.uk"
+                  href="https://www.thebodyshop.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="font-bold hover:text-orange-500"
+                  className="font-bold hover:text-green-700"
                 >
-                  Sainsbury&apos;s
-                </a>{" "}
-                - focused on building tools to help support colleagues in stores.
+                  The Body Shop
+                </a>
+                .
               </motion.p>
               <motion.p variants={FADE_IN} className="my-2">
                 I&apos;m always looking to learn new skills that will help me become a{" "}
