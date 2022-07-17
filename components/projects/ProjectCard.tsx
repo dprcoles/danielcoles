@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
         <div className="flex ml-auto space-x-4">
           <a href={data.html_url} target="_blank" rel="noreferrer">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <div className="bg-gradient-to-r flex p-2 hover:from-[#ee9ca7] hover:to-[#ffdde1] dark:hover:from-[#4568dc] dark:hover:to-[#b06ab3] rounded-md">
+              <div className="flex p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
                 <FaGithub title="View source code" className="mr-2" size={20} /> <b>View source</b>
               </div>
             </motion.div>
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
           {data.homepage.length > 0 && (
             <a href={data.homepage} target="_blank" rel="noreferrer">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <div className="bg-gradient-to-r flex p-2 hover:from-[#fd746C] hover:to-[#ff9068] dark:hover:from-[#cc2b5e] dark:hover:to-[#753a88] rounded-md">
+                <div className="flex p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
                   <FaExternalLinkSquareAlt title="View site" className="mr-2" size={20} />{" "}
                   <b>View site</b>
                 </div>
