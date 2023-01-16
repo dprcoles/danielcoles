@@ -38,7 +38,7 @@ const Projects: NextPage<PageInterface> = ({ appMounted }) => {
               Here is a list of projects that I am working/have worked on, to help grow and develop
               my skills as a developer. All of the projects listed here are publicly available on my{" "}
               <a
-                href="https://www.github.com/dcolesDEV?tab=repositories"
+                href="https://www.github.com/dprcoles?tab=repositories"
                 target="_blank"
                 className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
                 rel="noreferrer"

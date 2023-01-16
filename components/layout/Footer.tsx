@@ -12,53 +12,15 @@ const Footer: React.FC = () => {
 
   return (
     <div className="[ Footer ] max-w-4xl mb-2 md:mb-8 mx-auto border-t-2 border-gray-200 dark:border-gray-700">
-      <div className="mt-2 mx-2 md:mx-0 md:mt-4 flex">
-        {data && <CurrentlyPlaying data={data} />}
-        <div className="ml-auto">
-          <NextLink href="/spotify">
-            <a>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <div className="flex p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
-                  <FaListOl title="Link to top songs" className="mr-2" size={20} /> My top songs
-                </div>
-              </motion.div>
-            </a>
-          </NextLink>
-        </div>
-      </div>
-      <div>
-        <div className="container p-2">
+      <div className="mt-2 mx-2 md:mx-0 md:mt-4 grid grid-cols-1 md:grid-cols-3">
+        {data && (
+          <div className="md:col-span-2">
+            <CurrentlyPlaying data={data} />
+          </div>
+        )}
+        <div className="p-2">
           <div className="flex justify-center md:justify-between space-x-4 item-center">
-            <div className="hidden md:block">
-              Built with{" "}
-              <a
-                className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
-                href="https://nextjs.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Next.js
-              </a>{" "}
-              and{" "}
-              <a
-                className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tailwind
-              </a>
-              . Hosted on{" "}
-              <a
-                className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
-                href="https://vercel.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ▲ Vercel
-              </a>
-            </div>
-            <div className="ml-auto flex space-x-4">
+            <div className="mr-auto md:ml-auto flex space-x-4">
               <a href="mailto:me@danielcoles.co.uk" rel="noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="p-2 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
@@ -66,7 +28,7 @@ const Footer: React.FC = () => {
                   </div>
                 </motion.div>
               </a>
-              <a href="https://github.com/dcolesDEV" target="_blank" rel="noreferrer">
+              <a href="https://github.com/dprcoles" target="_blank" rel="noreferrer">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">
                     <FaGithub title="Check out my GitHub" />

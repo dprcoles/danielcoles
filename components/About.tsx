@@ -61,7 +61,7 @@ const About: React.FC = () => {
               <motion.p variants={FADE_UP} className="my-2">
                 You can check out some of my work here on{" "}
                 <a
-                  href="https://www.github.com/dcolesDEV"
+                  href="https://www.github.com/dprcoles"
                   target="_blank"
                   className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
                   rel="noreferrer"

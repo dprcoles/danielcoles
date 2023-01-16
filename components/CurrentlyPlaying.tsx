@@ -12,7 +12,7 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
   if (!data.isPlaying)
     return (
       <div className="p-2 mb-2 rounded-md">
-        <div className="md:flex space-x-4">
+        <div className="flex space-x-4">
           <FaSpotify color="#1DB954" size={20} />
           <b>Not Playing</b>
         </div>
