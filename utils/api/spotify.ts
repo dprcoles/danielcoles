@@ -37,7 +37,7 @@ export const getCurrentlyPlaying = async (): Promise<Response> => {
   })
 }
 
-export const getTopTracks = async (): Promise<Response> => {
+export const getTopTracks = async () => {
   const { access_token } = await getAccessToken()
 
   return fetch(TOP_TRACKS_BASE_URL, {

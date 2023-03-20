@@ -1,13 +1,15 @@
+"use client"
+
 import React from "react"
 import { motion } from "framer-motion"
-import NextLink from "next/link"
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa"
-import { repositoryData } from "@/types/GithubData"
+import { RepositoryData } from "@/types/github"
 import LanguagePill from "./LanguagePill"
 import TopicPill from "./TopicPill"
+import Link from "next/link"
 
 interface ProjectCardProps {
-  data: repositoryData
+  data: RepositoryData
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
@@ -15,9 +17,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
     <div className="p-4 my-2 rounded-md">
       <div className="flex">
         <div className="text-2xl font-bold dark:hover:text-violet-500 hover:text-rose-300">
-          <NextLink href={data.html_url}>
-            <a target="_blank">{data.name}</a>
-          </NextLink>
+          <Link href={data.html_url} target="_blank">
+            {data.name}
+          </Link>
         </div>
         <div className="ml-auto">
           <LanguagePill language={data.language} />

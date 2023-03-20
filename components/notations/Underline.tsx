@@ -1,15 +1,22 @@
-import React from "react"
+"use client"
+
+import React, { PropsWithChildren } from "react"
 import { RoughNotation } from "react-rough-notation"
 
 interface UnderlineProps {
   colour: string
-  children: string
   order: number
   show?: boolean
   duration: number
 }
 
-const Underline: React.FC<UnderlineProps> = ({ colour, children, order, show, duration }) => {
+const Underline: React.FC<PropsWithChildren<UnderlineProps>> = ({
+  colour,
+  children,
+  order,
+  show,
+  duration,
+}) => {
   return (
     <RoughNotation
       type="underline"

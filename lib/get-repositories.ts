@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import { cache } from "react"
 import { getRepositories } from "@/utils/api/github"
+import { Repository } from "@/types/github"
 
-type repoData = {
+type RepositoryResponse = {
   name: string
   full_name: string
   html_url: string
@@ -12,12 +13,12 @@ type repoData = {
   topics: Array<string>
 }
 
-const get = async (_: NextApiRequest, res: NextApiResponse) => {
+const get = cache(async () => {
   const response = await getRepositories()
 
   const repos = await response.json()
 
-  const repositories = repos.map((repo: repoData) => ({
+  const repositories: Repository[] = repos.map((repo: RepositoryResponse) => ({
     name: repo.name,
     full_name: repo.full_name,
     html_url: repo.html_url,
@@ -25,10 +26,10 @@ const get = async (_: NextApiRequest, res: NextApiResponse) => {
     language: repo.language,
     stargazers_count: repo.stargazers_count,
     homepage: repo.homepage,
-    topics: repo.topics
+    topics: repo.topics,
   }))
 
-  return res.status(200).json({ repositories })
-}
+  return repositories
+})
 
 export default get

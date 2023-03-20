@@ -1,5 +1,5 @@
 import React from "react"
-import { TrackData } from "@/types/SpotifyData"
+import { TrackData } from "@/types/spotify"
 import { Box } from "./notations"
 
 interface TrackCardProps {

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react"
 import { FaSun, FaMoon } from "react-icons/fa"
 import { useTheme } from "next-themes"
@@ -17,7 +19,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ initial }) => {
   const isDark = resolvedTheme === "dark"
 
   return (
-    <AnimatePresence exitBeforeEnter initial={initial}>
+    <AnimatePresence mode="wait" initial={initial}>
       <motion.span
         key={resolvedTheme}
         initial={{ x: 40, y: 40, rotate: 40, opacity: 0 }}

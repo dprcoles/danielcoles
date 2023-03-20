@@ -1,11 +1,13 @@
+"use client"
+
 import React from "react"
-import Image from "next/image"
-import { CurrentlyPlayingData } from "@/types/SpotifyData"
 import { motion } from "framer-motion"
 import { FaSpotify } from "react-icons/fa"
+import Link from "next/link"
+import { CurrentlyPlayingInfo } from "@/types/spotify"
 
 interface CurrentlyPlayingProps {
-  data: CurrentlyPlayingData
+  data: CurrentlyPlayingInfo
 }
 
 const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
@@ -20,7 +22,7 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
     )
 
   return (
-    <a
+    <Link
       href={data.trackUrl}
       target="_blank"
       className="text-black dark:text-white hover:text-violet-500 "
@@ -45,7 +47,7 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
           </div>
         </div>
       </motion.div>
-    </a>
+    </Link>
   )
 }
 

@@ -1,4 +1,4 @@
-import { ColourThemeType, NotationColours } from "@/types/Notation"
+import { ColourThemeType, NotationColours } from "@/types/notations"
 import { DARK_THEME_COLOURS, LIGHT_THEME_COLOURS } from "./constants"
 
 export const shuffle = (array: Array<any>): Array<any> => {

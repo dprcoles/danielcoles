@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next"
 import { getCurrentlyPlaying } from "@/utils/api/spotify"
 
-const get = async (_: NextApiRequest, res: NextApiResponse) => {
+const get = async () => {
   const response = await getCurrentlyPlaying()
 
-  if (response.status === 204 || response.status > 400)
-    return res.status(200).json({ isPlaying: false })
+  console.log(response)
+
+  if (response.status === 204 || response.status > 400) return { isPlaying: false }
 
   const track = await response.json()
 
@@ -17,15 +17,13 @@ const get = async (_: NextApiRequest, res: NextApiResponse) => {
   const title = item.name
   const trackUrl = item.external_urls.spotify
 
-  res.setHeader("Cache-Control", "public, s-maxage=60, stale-while-revalidate=30")
-
-  return res.status(200).json({
+  return {
     albumImageUrl,
     artist,
     isPlaying,
     trackUrl,
     title,
-  })
+  }
 }
 
 export default get

@@ -1,23 +1,13 @@
+"use client"
+
 import React from "react"
-import { CurrentlyPlayingData } from "@/types/SpotifyData"
 import { motion } from "framer-motion"
-import NextLink from "next/link"
-import { FaEnvelopeOpen, FaGithub, FaLinkedinIn, FaTwitter, FaListOl } from "react-icons/fa"
-import fetcher from "@/utils/api/fetcher"
-import useSWR from "swr"
-import CurrentlyPlaying from "../CurrentlyPlaying"
+import { FaEnvelopeOpen, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 
 const Footer: React.FC = () => {
-  const { data } = useSWR<CurrentlyPlayingData>("/api/getCurrentlyPlaying", fetcher)
-
   return (
     <div className="[ Footer ] max-w-4xl mb-2 md:mb-8 mx-auto border-t-2 border-gray-200 dark:border-gray-700">
       <div className="mt-2 mx-2 md:mx-0 md:mt-4 grid grid-cols-1 md:grid-cols-3">
-        {data && (
-          <div className="md:col-span-2">
-            <CurrentlyPlaying data={data} />
-          </div>
-        )}
         <div className="p-2">
           <div className="flex justify-center md:justify-between space-x-4 item-center">
             <div className="mr-auto md:ml-auto flex space-x-4">

@@ -1,3 +1,5 @@
+import { cache } from "react"
+
 const GET_REPOSITORIES_URL = "https://api.github.com/users/dprcoles/repos"
 
 const githubToken = process.env.GITHUB_PAT_TOKEN
