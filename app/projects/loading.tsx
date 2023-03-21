@@ -3,9 +3,9 @@ import React from "react"
 const Loading = () => {
   return (
     <div className="spinner">
-      <div className="first bg-dark dark:bg-white"></div>
-      <div className="second bg-dark dark:bg-white"></div>
-      <div className="bg-dark dark:bg-white"></div>
+      <div className="firstbg-white"></div>
+      <div className="second bg-white"></div>
+      <div className="bg-white"></div>
     </div>
   )
 }

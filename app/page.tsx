@@ -1,86 +1,86 @@
 "use client"
 
-import React from "react"
-import AnimatedBlock from "@/components/AnimatedBlock"
-import { FADE_IN, FADE_UP, MINI_ME_VARIANT, STAGGER } from "@/utils/variants"
-import { Bracket, Highlight, Underline } from "@/components/notations"
-import { useTheme } from "next-themes"
-import { shuffledColours } from "@/utils/helpers"
 import Link from "next/link"
-import { MiniMe } from "../components"
+import React from "react"
+
+import AnimatedBlock from "@/components/AnimatedBlock"
+import { Box, Bracket, Highlight, Underline } from "@/components/notations"
 import NotationGroup from "@/components/notations/NotationGroup"
+import { role } from "@/lib/info"
+import { shuffledColours } from "@/utils/helpers"
+import { FADE_IN } from "@/utils/variants"
 
 const Home = () => {
-  const { resolvedTheme } = useTheme()
-  const { bracket, highlight, underline } = shuffledColours(resolvedTheme)
+  const { underline, highlight, box, bracket } = shuffledColours()
 
   return (
-    <div className="[ Home ]">
-      <div className="container mx-auto">
-        <div className="md:flex mx-2 md:mx-0 md:space-x-4 item-center">
-          <AnimatedBlock variants={STAGGER}>
-            <NotationGroup show>
-              <AnimatedBlock variants={FADE_IN} className="text-2xl lg:text-4xl">
-                <span className="font-extrabold">
-                  Hey, I&apos;m{" "}
-                  <Underline colour={underline[0]} order={1} duration={500}>
-                    Daniel!
-                  </Underline>
-                </span>{" "}
-                👋
-              </AnimatedBlock>
-              <div className="mt-4">
-                <AnimatedBlock variants={FADE_IN} className="my-2 text-lg">
-                  <Bracket colour={bracket[0]} order={2} duration={500}>
-                    I like making cool and interesting things with code, as well as designing stuff
-                    for fun!
-                  </Bracket>
-                </AnimatedBlock>
-                <AnimatedBlock variants={FADE_IN} className="my-2">
-                  I&apos;m currently working as a{" "}
-                  <Highlight colour={highlight[1]} order={3}>
-                    Software Engineer
-                  </Highlight>{" "}
-                  at{" "}
-                  <Link
-                    href="https://www.thebodyshop.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-bold hover:text-green-700"
-                  >
-                    The Body Shop
-                  </Link>
-                  .
-                </AnimatedBlock>
-                <AnimatedBlock variants={FADE_IN} className="my-2">
-                  I&apos;m always looking to learn new skills that will help me become a{" "}
-                  <Highlight colour={highlight[2]} order={3}>
-                    better developer,
-                  </Highlight>{" "}
-                  and enable me to further build my{" "}
-                  <Highlight colour={highlight[3]} order={3}>
-                    career in tech.
-                  </Highlight>
-                </AnimatedBlock>
-                <AnimatedBlock variants={FADE_UP} className="my-2">
-                  You can check out some of my work here on{" "}
-                  <Link
-                    href="https://www.github.com/dprcoles"
-                    target="_blank"
-                    className="font-bold hover:text-rose-300 dark:hover:text-violet-500"
-                    rel="noreferrer"
-                  >
-                    GitHub!
-                  </Link>
-                </AnimatedBlock>
-              </div>
-            </NotationGroup>
-          </AnimatedBlock>
-          <AnimatedBlock variants={MINI_ME_VARIANT} className="flex-shrink-0">
-            <MiniMe />
-          </AnimatedBlock>
-        </div>
-      </div>
+    <div className="w-full">
+      <NotationGroup show>
+        <AnimatedBlock variants={FADE_IN} className="my-2">
+          <h2 className="text-3xl font-extrabold mb-8">
+            <Underline colour={underline[0]} order={1} duration={500} show>
+              About
+            </Underline>
+          </h2>
+          <div className="space-y-4 text-lg">
+            <div>
+              Hey 👋🏻, I&apos;m{" "}
+              <Underline colour={underline[1]} order={2} duration={500}>
+                <b className="font-bold">Daniel</b>
+              </Underline>
+              . I&apos;m a{" "}
+              <Underline colour={underline[2]} order={3} duration={500}>
+                <b className="font-bold">Software Engineer</b>
+              </Underline>{" "}
+              at{" "}
+              <Underline colour={underline[3]} order={4} duration={500}>
+                <Link
+                  href={role.company.name}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-bold hover:text-green-700"
+                >
+                  {role.company.name}
+                </Link>
+              </Underline>
+              .
+            </div>
+            <div>
+              <Bracket colour={bracket[0]} order={5} duration={500}>
+                I like making cool and interesting things with code, as well as designing stuff for
+                fun!
+              </Bracket>
+            </div>
+            <div>
+              I&apos;m always looking to{" "}
+              <Highlight colour={highlight[0]} order={6}>
+                learn new skills
+              </Highlight>{" "}
+              that will help me become a{" "}
+              <Highlight colour={highlight[1]} order={7}>
+                better developer,
+              </Highlight>{" "}
+              and enable me to further build my{" "}
+              <Highlight colour={highlight[2]} order={8}>
+                career in tech.
+              </Highlight>
+            </div>
+            <div className="py-1">
+              <Box colour={box[0]} duration={500} order={9}>
+                You can check out some of my work here on{" "}
+                <Link
+                  href="https://www.github.com/dprcoles"
+                  target="_blank"
+                  className="font-bold hover:text-violet-500"
+                  rel="noreferrer"
+                >
+                  GitHub!
+                </Link>
+              </Box>
+            </div>
+          </div>
+        </AnimatedBlock>
+      </NotationGroup>
     </div>
   )
 }

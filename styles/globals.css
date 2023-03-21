@@ -8,6 +8,29 @@
   z-index: -1;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .ScreenLogger {
   display: none;
+}
+
+#background-pattern {
+  background-color: #e299ff;
+  background-image: radial-gradient(at 43% 75%, hsla(252, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 2% 57%, hsla(205, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 3% 43%, hsla(3, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 62%, hsla(206, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 91% 64%, hsla(266, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 65%, hsla(331, 100%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 51% 19%, hsla(296, 100%, 23%, 1) 0px, transparent 50%);
+  min-height: 100%;
+  position: fixed;
+  opacity: 0.1;
+  top: 0px;
+  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+  width: 100vw;
+  z-index: -1;
 }

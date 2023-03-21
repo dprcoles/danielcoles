@@ -6,7 +6,7 @@ import { RoughNotation } from "react-rough-notation"
 interface HighlightProps {
   colour: string
   children: string
-  order: number
+  order?: number
   show?: boolean
 }
 

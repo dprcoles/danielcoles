@@ -2,7 +2,7 @@ import { Variants } from "framer-motion"
 
 export const EASE = [0.5, -0.05, 0.5, 0.99]
 
-export const FADE_IN = {
+export const FADE_IN: Variants = {
   initial: {
     y: 0,
     opacity: 0,
@@ -13,6 +13,22 @@ export const FADE_IN = {
     transition: {
       duration: 0.5,
       ease: EASE,
+    },
+  },
+}
+
+export const CURRENTLY_PLAYING_VARIANT: Variants = {
+  initial: {
+    y: 0,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: EASE,
+      delay: 2,
     },
   },
 }
@@ -50,7 +66,7 @@ export const FADE_DOWN: Variants = {
 export const STAGGER: Variants = {
   animate: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.4,
     },
   },
 }
@@ -76,15 +92,15 @@ export const ICON_FADE = (colour: string): Variants => {
 
 export const MINI_ME_VARIANT: Variants = {
   initial: {
-    x: -500,
-    y: 0,
+    x: 0,
+    y: 500,
     opacity: 0,
   },
   animate: {
     x: 0,
     y: 0,
     opacity: 1,
-    transition: { type: "spring", duration: 2, stiffness: 75 },
+    transition: { type: "spring", duration: 3, stiffness: 50 },
   },
 }
 

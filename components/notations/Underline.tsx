@@ -5,7 +5,7 @@ import { RoughNotation } from "react-rough-notation"
 
 interface UnderlineProps {
   colour: string
-  order: number
+  order?: number
   show?: boolean
   duration: number
 }

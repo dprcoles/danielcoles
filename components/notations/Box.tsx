@@ -5,7 +5,7 @@ import { RoughNotation } from "react-rough-notation"
 
 interface BoxProps {
   colour: string
-  children: string
+  children: React.ReactNode
   order: number
   show?: boolean
   duration: number
@@ -18,6 +18,7 @@ const Box: React.FC<BoxProps> = ({ colour, children, order, show, duration }) =>
       animationDuration={duration}
       color={colour}
       strokeWidth={2}
+      padding={[8, 8]}
       order={order}
       show={show}
     >

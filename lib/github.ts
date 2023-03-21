@@ -1,6 +1,10 @@
+"server only"
+
 import { cache } from "react"
-import { getRepositories } from "@/utils/api/github"
+
 import { Repository } from "@/types/github"
+
+const GET_REPOSITORIES_URL = "https://api.github.com/users/dprcoles/repos"
 
 type RepositoryResponse = {
   name: string
@@ -13,8 +17,10 @@ type RepositoryResponse = {
   topics: Array<string>
 }
 
-const get = cache(async () => {
-  const response = await getRepositories()
+export const getRepositories = cache(async () => {
+  const response = await fetch(GET_REPOSITORIES_URL, {
+    method: "GET",
+  })
 
   const repos = await response.json()
 
@@ -31,5 +37,3 @@ const get = cache(async () => {
 
   return repositories
 })
-
-export default get

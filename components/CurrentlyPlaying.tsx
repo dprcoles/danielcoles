@@ -1,53 +1,40 @@
 "use client"
 
-import React from "react"
-import { motion } from "framer-motion"
-import { FaSpotify } from "react-icons/fa"
 import Link from "next/link"
+import React from "react"
+import { FaSpotify } from "react-icons/fa"
+
 import { CurrentlyPlayingInfo } from "@/types/spotify"
 
 interface CurrentlyPlayingProps {
-  data: CurrentlyPlayingInfo
+  data?: CurrentlyPlayingInfo
 }
 
 const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
-  if (!data.isPlaying)
-    return (
-      <div className="p-2 mb-2 rounded-md">
-        <div className="flex space-x-4">
-          <FaSpotify color="#1DB954" size={20} />
-          <b>Not Playing</b>
-        </div>
-      </div>
-    )
+  if (!data || !data.isPlaying) return null
 
   return (
-    <Link
-      href={data.trackUrl}
-      target="_blank"
-      className="text-black dark:text-white hover:text-violet-500 "
-      rel="noreferrer"
-    >
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="[ CurrentlyPlaying ]"
-      >
-        <div className="p-2 mb-2 rounded-md">
-          <div className="md:flex md:space-x-4">
-            <span className="flex">
-              <FaSpotify color="#1DB954" className="mr-2" size={20} />
-              <b>Now Playing</b>
-            </span>
-            <span className="hidden md:block"> – </span>
-            <div className="md:flex md:space-x-2">
-              <div>{data.title}</div>
+    <div className="py-2 px-4 shadow-lg rounded-lg bg-gradient-to-tl from-green-300/10 to-green-500/5 ring-2 ring-green-500/25 ring-offset-1 ring-offset-black/5">
+      <div className="flex items-center">
+        <span>
+          <FaSpotify color="#1DB954" className="mr-4" size="1.5rem" />
+        </span>
+        <div>
+          <b className="text-lg text-green-100">Currently Playing</b>
+          <Link
+            href={data.trackUrl}
+            target="_blank"
+            className="text-white hover:text-violet-500"
+            rel="noreferrer"
+          >
+            <div className="flex items-center flex-wrap">
+              <div className="mr-2">{data.title}</div>
               <div className="opacity-75">{data.artist}</div>
             </div>
-          </div>
+          </Link>
         </div>
-      </motion.div>
-    </Link>
+      </div>
+    </div>
   )
 }
 
