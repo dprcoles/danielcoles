@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./utils/**/*.{js,ts}",
     "safelist.txt",
@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Noto Sans Display", ...defaultTheme.fontFamily.sans],
+        sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         javascript: {

@@ -1,8 +1,4 @@
-export type repositoriesData = {
-  repositories: Array<repositoryData>
-}
-
-export type repositoryData = {
+export type Repository = {
   name: string
   full_name: string
   html_url: string

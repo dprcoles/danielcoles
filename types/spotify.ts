@@ -1,22 +1,22 @@
-export type TopTracksData = {
-  tracks: Array<TrackData>
+export type TopTracks = {
+  tracks: Array<Track>
 }
 
-export type TrackData = {
+export type Track = {
   title: string
   artist: string
   trackUrl: string
 }
 
 export type TrackType = {
-  artists: ArtistsData[]
+  artists: Artists[]
   external_urls: {
     spotify: string
   }
   name: string
 }
 
-export type ArtistsData = {
+export type Artists = {
   external_urls: {
     spotify: string
   }
@@ -27,7 +27,7 @@ export type ArtistsData = {
   uri: string
 }
 
-export type CurrentlyPlayingData = {
+export type CurrentlyPlayingInfo = {
   isPlaying: boolean
   albumImageUrl: string
   title: string

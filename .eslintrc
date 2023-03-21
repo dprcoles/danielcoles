@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "extends": ["next"],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -11,7 +14,11 @@
         "allowShortCircuit": true,
         "allowTernary": true
       }
-    ]
+    ],
+    "@next/next/no-html-link-for-pages": ["error", "app/"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "no-unused-vars": "error"
   },
-  "plugins": ["simple-import-sort"]
+  "plugins": ["simple-import-sort", "import"]
 }

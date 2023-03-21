@@ -1,4 +1,4 @@
-import { ColourThemeType } from "@/types/Notation"
+import { ColourThemeType } from "@/types/notations"
 
 export const LIGHT_THEME_COLOURS: Array<ColourThemeType> = [
   {
