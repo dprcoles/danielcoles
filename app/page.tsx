@@ -35,7 +35,7 @@ const Home = () => {
               at{" "}
               <Underline colour={underline[3]} order={4} duration={500}>
                 <Link
-                  href={role.company.name}
+                  href={role.company.link}
                   target="_blank"
                   rel="noreferrer"
                   className="font-bold hover:text-green-700"
