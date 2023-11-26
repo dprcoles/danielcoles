@@ -53,27 +53,30 @@ export const getCurrentlyPlaying = async () => {
     return notPlayingResponse
   }
 
-  const track = await response.json()
+  try {
+    const track = await response.json()
 
-  const { item, is_playing } = track
+    const { item, is_playing } = track
 
-  if (!is_playing) return notPlayingResponse
+    if (!is_playing) return notPlayingResponse
 
-  const albumImageUrl = item.album.images[0].url
-  const artist = item.artists.map((x: { name: string }) => x.name).join(", ")
-  const isPlaying = is_playing
-  const title = item.name
-  const trackUrl = item.external_urls.spotify
+    const albumImageUrl = item.album.images[0].url
+    const artist = item.artists.map((x: { name: string }) => x.name).join(", ")
+    const isPlaying = is_playing
+    const title = item.name
+    const trackUrl = item.external_urls.spotify
 
-  const data: CurrentlyPlayingInfo = {
-    albumImageUrl,
-    artist,
-    isPlaying,
-    trackUrl,
-    title,
+    const data: CurrentlyPlayingInfo = {
+      albumImageUrl,
+      artist,
+      isPlaying,
+      trackUrl,
+      title,
+    }
+    return data
+  } catch (error) {
+    return notPlayingResponse
   }
-
-  return data
 }
 
 export const getTopTracks = cache(async () => {

@@ -92,21 +92,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={classNames(spaceGrotesk.className, "text-white bg-zinc-900")}>
         <Providers>
           <main className="mx-auto min-h-screen flex flex-col selection:text-zinc-900 selection:bg-violet-500">
-            <svg
-              className="pointer-events-none fixed isolate z-30 opacity-50 mix-blend-soft-light"
-              width="100%"
-              height="100%"
-            >
-              <filter id="displacementFilter">
-                <feTurbulence
-                  type="turbulence"
-                  baseFrequency="0.9"
-                  numOctaves="3"
-                  result="turbulence"
-                />
-              </filter>
-              <rect width="100%" height="100%" filter="url(#displacementFilter)"></rect>
-            </svg>
             <NavBlock currentlyPlaying={currentlyPlaying} />
             <div className="max-w-full lg:max-w-4xl mx-auto mt-8 antialiased px-4 pb-16">
               <div className="py-2 min-h-screen">{children}</div>

@@ -27,7 +27,6 @@ const MiniMe: React.FC = () => {
         ear: document.querySelectorAll(".Ear"),
         eyebrowLeft: document.querySelector(".Eyebrow__Left"),
         eyebrowRight: document.querySelector(".Eyebrow__Right"),
-        screenLog: document.querySelector(".ScreenLogger"),
       }
 
       let xPosition: any
@@ -54,13 +53,6 @@ const MiniMe: React.FC = () => {
 
         const x = xPosition
         const y = yPosition
-
-        if (xPosition && yPosition) {
-          // @ts-ignore
-          dom.screenLog.innerHTML = `
-          <p> x: ${Math.round(x)}</p>
-          <p> y: ${Math.round(y)} </p>`
-        }
 
         gsap.to(dom.face, {
           yPercent: y / 30,
@@ -109,7 +101,7 @@ const MiniMe: React.FC = () => {
     <div className="mx-auto w-[250px] md:w-[400px]">
       <svg
         width="100%"
-        viewBox="50 150 1100 850"
+        viewBox="50 140 1100 850"
         fill="none"
         className="md:p-2"
         xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +153,7 @@ const MiniMe: React.FC = () => {
             <path
               className="[ BackgroundSplash ]"
               d="M1117.51 763.107C1117.51 973.613 855.298 984.177 607.838 984.177C360.378 984.177 56.1564 973.613 56.1564 763.107C56.1564 552.601 360.378 221.867 607.838 221.867C855.298 221.867 1117.51 552.601 1117.51 763.107Z"
-              fill="#404040"
+              fill="#2C2431"
             />
             <g className="[ Me ]">
               <path
@@ -334,7 +326,6 @@ const MiniMe: React.FC = () => {
           </g>
         </g>
       </svg>
-      <div className="ScreenLogger">transform: translate(0,0)</div>
     </div>
   )
 }
