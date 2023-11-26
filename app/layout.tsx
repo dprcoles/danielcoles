@@ -22,14 +22,10 @@ export const metadata: Metadata = {
     default: "Daniel Coles - Software Engineer",
     template: "%s | Daniel Coles",
   },
-  colorScheme: "dark",
   creator: "me@danielcoles.co.uk",
   description: "Full Stack Software Engineer that loves making fun things with code!",
   icons: {
     shortcut: "/logo.svg",
-  },
-  themeColor: {
-    color: "rgb(24, 24, 27)",
   },
   openGraph: {
     title: "Daniel Coles - Software Engineer",
