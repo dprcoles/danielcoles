@@ -10,7 +10,7 @@ interface HighlightProps {
   show?: boolean
 }
 
-const Highlight: React.FC<HighlightProps> = ({ colour, children, order, show }) => {
+const Highlight = ({ colour, children, order, show }: HighlightProps) => {
   const animationDuration = Math.floor(30 * children.length)
 
   return (

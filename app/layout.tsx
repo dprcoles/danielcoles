@@ -1,8 +1,8 @@
-import "@/styles/globals.css"
+import "./styles/globals.css"
 
 import classNames from "classnames"
 import { Metadata } from "next"
-import { Space_Grotesk } from "next/font/google"
+import { Inter, Space_Grotesk, Space_Mono } from "next/font/google"
 import Script from "next/script"
 import React from "react"
 
@@ -12,8 +12,20 @@ import { getCurrentlyPlaying } from "@/lib/spotify"
 
 import { Providers } from "./providers"
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  variable: "--font-space-grotesk",
+})
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-space-mono",
 })
 
 export const metadata: Metadata = {
@@ -66,7 +78,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const currentlyPlaying = await getCurrentlyPlaying()
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={classNames(inter.variable, spaceGrotesk.variable, spaceMono.variable)}
+    >
       <head>
         <link rel="icon" href="/logo.svg" />
         <link rel="shortcut icon" href="/logo.svg" />
@@ -85,7 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           `}
         </Script>
       </head>
-      <body className={classNames(spaceGrotesk.className, "text-white bg-zinc-900")}>
+      <body className={"text-white bg-zinc-900"}>
         <Providers>
           <main className="mx-auto min-h-screen flex flex-col selection:text-zinc-900 selection:bg-violet-500">
             <NavBlock currentlyPlaying={currentlyPlaying} />

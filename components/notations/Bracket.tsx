@@ -11,7 +11,7 @@ interface BracketProps {
   duration: number
 }
 
-const Bracket: React.FC<BracketProps> = ({ colour, children, order, show, duration }) => {
+const Bracket = ({ colour, children, order, show, duration }: BracketProps) => {
   return (
     <RoughNotation
       type="bracket"

@@ -2,7 +2,7 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["next"],
+  "extends": ["next", "prettier", "plugin:prettier/recommended"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
@@ -18,7 +18,8 @@
     "@next/next/no-html-link-for-pages": ["error", "app/"],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }, { "usePrettierrc": true }]
   },
   "plugins": ["simple-import-sort", "import"]
 }

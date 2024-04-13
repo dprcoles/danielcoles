@@ -5,7 +5,7 @@ import React from "react"
 
 interface AnimatedBlockProps extends HTMLMotionProps<"div"> {}
 
-const AnimatedBlock: React.FC<AnimatedBlockProps> = ({ children, ...props }) => {
+const AnimatedBlock = ({ children, ...props }: AnimatedBlockProps) => {
   return <motion.div {...props}>{children}</motion.div>
 }
 

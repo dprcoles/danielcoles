@@ -15,10 +15,10 @@ export const shuffledColours = (): NotationColours => {
   const colours: Array<ColourThemeType> = shuffle(DARK_THEME_COLOURS)
 
   const coloursArray: NotationColours = {
-    box: [...shuffle(colours.filter(x => x.types.includes("box")).map(x => x.hex))],
-    bracket: [...shuffle(colours.filter(x => x.types.includes("bracket")).map(x => x.hex))],
-    highlight: [...shuffle(colours.filter(x => x.types.includes("highlight")).map(x => x.hex))],
-    underline: [...shuffle(colours.filter(x => x.types.includes("underline")).map(x => x.hex))],
+    box: [...shuffle(colours.filter((x) => x.types.includes("box")).map((x) => x.hex))],
+    bracket: [...shuffle(colours.filter((x) => x.types.includes("bracket")).map((x) => x.hex))],
+    highlight: [...shuffle(colours.filter((x) => x.types.includes("highlight")).map((x) => x.hex))],
+    underline: [...shuffle(colours.filter((x) => x.types.includes("underline")).map((x) => x.hex))],
   }
 
   return coloursArray

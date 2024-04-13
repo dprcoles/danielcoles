@@ -12,7 +12,7 @@ import AnimatedBlock from "./AnimatedBlock"
 import AnimatedLogo from "./AnimatedLogo"
 import NavLink from "./NavLink"
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const pathname = usePathname()
 
   return (
@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
           </Link>
           <AnimatedBlock variants={STAGGER} className="flex gap-4">
             {links
-              .filter(x => x.link !== "/")
-              .map(x => (
+              .filter((x) => x.link !== "/")
+              .map((x) => (
                 <NavLink key={x.name} {...x} showText={!x.external} active={pathname === x.link} />
               ))}
           </AnimatedBlock>

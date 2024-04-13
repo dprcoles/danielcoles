@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 
 import { ICON_FADE } from "@/utils/variants"
 
-const AnimatedLogo: React.FC = () => {
+const AnimatedLogo = () => {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])

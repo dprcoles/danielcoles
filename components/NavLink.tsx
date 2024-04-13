@@ -18,7 +18,7 @@ interface NavLinkProps {
   external: boolean
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ name, icon, link, active, showText, external }) => {
+const NavLink = ({ name, icon, link, active, showText, external }: NavLinkProps) => {
   const [showNotation, setShowNotation] = useState<boolean>(false)
 
   return (

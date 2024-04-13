@@ -4,7 +4,7 @@
 import gsap from "gsap"
 import { useEffect, useState } from "react"
 
-const MiniMe: React.FC = () => {
+const MiniMe = () => {
   //Reference: https://www.cassie.codes/posts/making-a-lil-me-part-2/
   const [mounted, setMounted] = useState(false)
 
@@ -13,7 +13,7 @@ const MiniMe: React.FC = () => {
   gsap.config({
     nullTargetWarn: false,
   })
-  ;(function() {
+  ;(function () {
     if (typeof window !== "undefined" && mounted) {
       const safeToAnimate = window.matchMedia("(prefers-reduced-motion: no-preference)").matches
       if (!safeToAnimate) return
