@@ -11,7 +11,7 @@ interface BoxProps {
   duration: number
 }
 
-const Box: React.FC<BoxProps> = ({ colour, children, order, show, duration }) => {
+const Box = ({ colour, children, order, show, duration }: BoxProps) => {
   return (
     <RoughNotation
       type="box"

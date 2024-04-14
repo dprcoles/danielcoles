@@ -11,25 +11,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        javascript: {
-          from: "#F1E05A",
-          to: "#CFC04C",
-        },
-        go: {
-          from: "#00A3CC",
-          to: "#00CCFF",
-        },
-        rust: {
-          from: "#DEA584",
-          to: "#A87D63",
-        },
-        typescript: {
-          from: "#2B7489",
-          to: "#3693AD",
-        },
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        heading: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },

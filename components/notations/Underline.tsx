@@ -10,13 +10,13 @@ interface UnderlineProps {
   duration: number
 }
 
-const Underline: React.FC<PropsWithChildren<UnderlineProps>> = ({
+const Underline = ({
   colour,
   children,
   order,
   show,
   duration,
-}) => {
+}: PropsWithChildren<UnderlineProps>) => {
   return (
     <RoughNotation
       type="underline"

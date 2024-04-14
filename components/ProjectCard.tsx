@@ -13,7 +13,7 @@ interface ProjectCardProps {
   data: Repository
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
+const ProjectCard = ({ data }: ProjectCardProps) => {
   return (
     <div className="p-4 my-2 rounded-lg bg-zinc-700/10">
       <div className="flex">
@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
       </div>
       <div className="pt-4 flex">
         <div className="hidden md:flex mr-auto space-x-4">
-          {data.topics?.map(x => (
+          {data.topics?.map((x) => (
             <span
               key={`${data.name}-${x}-topic`}
               className="bg-zinc-700/10 text-white p-2 rounded-lg shadow-lg"

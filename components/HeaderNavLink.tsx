@@ -14,7 +14,7 @@ interface HeaderNavLinkProps {
   active?: boolean
 }
 
-const HeaderNavLink: React.FC<HeaderNavLinkProps> = ({ name, icon, link, active }) => {
+const HeaderNavLink = ({ name, icon, link, active }: HeaderNavLinkProps) => {
   return (
     <Link href={link}>
       <motion.div tabIndex={-1} variants={FADE_IN}>

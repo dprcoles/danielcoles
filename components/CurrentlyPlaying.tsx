@@ -10,7 +10,7 @@ interface CurrentlyPlayingProps {
   data?: CurrentlyPlayingInfo
 }
 
-const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({ data }) => {
+const CurrentlyPlaying = ({ data }: CurrentlyPlayingProps) => {
   if (!data || !data.isPlaying) return null
 
   return (

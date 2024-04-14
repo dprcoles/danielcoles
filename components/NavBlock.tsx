@@ -25,7 +25,7 @@ interface NavBlockProps {
   currentlyPlaying?: CurrentlyPlayingInfo
 }
 
-const NavBlock: React.FC<NavBlockProps> = ({ currentlyPlaying }) => {
+const NavBlock = ({ currentlyPlaying }: NavBlockProps) => {
   const [colours, setColours] = useState<NotationColours>(shuffledColours())
   const pathname = usePathname()
   const intersectionRef = useRef(null)
@@ -59,7 +59,7 @@ const NavBlock: React.FC<NavBlockProps> = ({ currentlyPlaying }) => {
             !showNavbar && "opacity-100"
           )}
         >
-          <div className="md:flex mx-2 md:mx-0 md:space-x-4 items-center">
+          <div className="md:flex mx-2 md:mx-0 md:space-x-4 items-center justify-between">
             <AnimatedBlock variants={MINI_ME_VARIANT} className="flex-shrink-0 mb-2">
               <MiniMe />
             </AnimatedBlock>
@@ -88,8 +88,8 @@ const NavBlock: React.FC<NavBlockProps> = ({ currentlyPlaying }) => {
               </NotationGroup>
               <AnimatedBlock variants={STAGGER} className="flex gap-4 py-8 flex-wrap">
                 {links
-                  .filter(x => x.external)
-                  .map(x => (
+                  .filter((x) => x.external)
+                  .map((x) => (
                     <NavLink key={x.name} {...x} showText />
                   ))}
               </AnimatedBlock>
@@ -102,8 +102,8 @@ const NavBlock: React.FC<NavBlockProps> = ({ currentlyPlaying }) => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-8">
             {links
-              .filter(x => !x.external)
-              .map(x => (
+              .filter((x) => !x.external)
+              .map((x) => (
                 <HeaderNavLink key={x.name} {...x} active={pathname === x.link} />
               ))}
           </div>

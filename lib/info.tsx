@@ -1,4 +1,4 @@
-import { FaCode, FaEnvelope, FaGithub, FaLinkedinIn, FaSmileBeam, FaTwitter } from "react-icons/fa"
+import { FaCode, FaEnvelope, FaGithub, FaLinkedinIn, FaSmileBeam } from "react-icons/fa"
 
 export const role = {
   title: "Software Engineer",
@@ -34,15 +34,9 @@ export const links = [
     external: true,
   },
   {
-    name: "Linkedin",
+    name: "LinkedIn",
     link: "https://www.linkedin.com/in/danielcoles/",
     icon: <FaLinkedinIn title="Follow me on LinkedIn" size="1.2rem" />,
-    external: true,
-  },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/_danielcoles",
-    icon: <FaTwitter title="Follow me on Twitter" size="1.2rem" />,
     external: true,
   },
 ]
