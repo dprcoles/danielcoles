@@ -38,7 +38,7 @@ const Home = () => {
                   href={role.company.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-bold hover:text-green-700"
+                  className="font-bold hocus:text-green-700"
                 >
                   {role.company.name}
                 </Link>
@@ -71,7 +71,7 @@ const Home = () => {
                 <Link
                   href="https://www.github.com/dprcoles"
                   target="_blank"
-                  className="font-bold hover:text-violet-500"
+                  className="font-bold hocus:text-violet-500"
                   rel="noreferrer"
                 >
                   GitHub!

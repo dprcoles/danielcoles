@@ -77,7 +77,7 @@ const NavBlock = ({ currentlyPlaying }: NavBlockProps) => {
                       href={role.company.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-bold hover:text-black"
+                      className="font-bold hocus:text-black"
                     >
                       <Highlight colour="rgb(21 128 61)" order={2}>
                         {role.company.name}

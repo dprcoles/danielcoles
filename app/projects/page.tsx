@@ -34,7 +34,7 @@ const Projects = async () => {
           <a
             href="https://www.github.com/dprcoles?tab=repositories"
             target="_blank"
-            className="font-bold hover:text-violet-500"
+            className="font-bold hocus:text-violet-500"
             rel="noreferrer"
           >
             GitHub
