@@ -1,5 +1,7 @@
+const plugin = require("tailwindcss/plugin")
 const defaultTheme = require("tailwindcss/defaultTheme")
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -11,14 +13,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        heading: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
-        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
+        sans: ["var(--font-family-base)", ...defaultTheme.fontFamily.sans],
+        heading: ["var(--font-family-heading)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-family-mono)", ...defaultTheme.fontFamily.mono],
+      },
+      animation: {
+        "pulse-slow": "pulse 10s linear infinite",
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("hocus", ["&:hover", "&:focus"])
+      addVariant("group-hocus", [":merge(.group):hover &", ":merge(.group):focus &"])
+      addVariant("peer-hocus", [":merge(.peer):hover ~ &", ":merge(.peer):focus ~ &"])
+    }),
+  ],
 }

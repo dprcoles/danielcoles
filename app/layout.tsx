@@ -2,7 +2,7 @@ import "./styles/globals.css"
 
 import classNames from "classnames"
 import { Metadata } from "next"
-import { Inter, Space_Grotesk, Space_Mono } from "next/font/google"
+import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google"
 import Script from "next/script"
 import React from "react"
 
@@ -12,23 +12,24 @@ import { getCurrentlyPlaying } from "@/lib/spotify"
 
 import { Providers } from "./providers"
 
-const inter = Inter({
+const baseFont = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-family-base",
 })
 
-const spaceGrotesk = Space_Grotesk({
+const headingFont = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-family-heading",
 })
 
-const spaceMono = Space_Mono({
+const monoFont = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-space-mono",
+  weight: "500",
+  variable: "--font-family-mono",
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://danielcoles.dev"),
   applicationName: "Daniel Coles",
   title: {
     default: "Daniel Coles - Software Engineer",
@@ -41,28 +42,20 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Daniel Coles - Software Engineer",
-    description: `Full Stack Software Engineer that loves making fun things with code!`,
+    description: "Full Stack Software Engineer that loves making fun things with code!",
     url: "https://danielcoles.dev",
     type: "website",
+    siteName: "Daniel Coles",
+    locale: "en_GB",
     images: [
       {
-        url: "https://danielcoles.dev/meta.png",
-        alt: "Logo for danielcoles.dev",
-      },
-      {
         url: "https://danielcoles.dev/me.png",
-        alt: "Daniel",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Daniel Coles - Software Engineer",
-    description: "Full Stack Software Engineer that loves making fun things with code!",
-    site: "@_danielcoles",
-    creator: "@_danielcoles",
-    creatorId: "1295450166699458562",
-    images: ["https://danielcoles.dev/me.png"],
   },
   robots: {
     index: true,
@@ -81,7 +74,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html
       lang="en"
       suppressHydrationWarning
-      className={classNames(inter.variable, spaceGrotesk.variable, spaceMono.variable)}
+      className={classNames(baseFont.variable, headingFont.variable, monoFont.variable)}
     >
       <head>
         <link rel="icon" href="/logo.svg" />

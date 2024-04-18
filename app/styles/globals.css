@@ -11,7 +11,12 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: var(--font-inter);
+  font-family: var(--font-family-base);
+}
+
+button,
+a {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded-lg;
 }
 
 h1,
@@ -20,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-space-grotesk);
+  font-family: var(--font-family-heading);
 }
 
 .ScreenLogger {
