@@ -49,7 +49,7 @@ const ProjectCard = ({ data }: ProjectCardProps) => {
             ))}
         </div>
         <div className="flex ml-auto space-x-2">
-          {data.homepage.length > 0 && (
+          {data.homepage?.length > 0 && (
             <ProjectCardLink link={data.homepage}>
               <FaExternalLinkSquareAlt title="View site" className="mr-2" size={20} />{" "}
               <b>View site</b>
