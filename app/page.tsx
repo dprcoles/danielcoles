@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import React from "react"
 
@@ -38,7 +36,7 @@ const Home = () => {
                   href={role.company.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-bold hocus:text-green-700"
+                  className="font-bold hocus:text-orange-500"
                 >
                   {role.company.name}
                 </Link>

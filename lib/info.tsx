@@ -3,8 +3,8 @@ import { FaCode, FaEnvelope, FaGithub, FaLinkedinIn, FaSmileBeam } from "react-i
 export const role = {
   title: "Software Engineer",
   company: {
-    name: "The Body Shop",
-    link: "https://www.thebodyshop.com",
+    name: "Sainsbury's",
+    link: "https://www.sainsburys.co.uk/",
   },
 }
 

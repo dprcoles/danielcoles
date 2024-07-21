@@ -79,7 +79,7 @@ const NavBlock = ({ currentlyPlaying }: NavBlockProps) => {
                       rel="noreferrer"
                       className="font-bold hocus:text-black"
                     >
-                      <Highlight colour="rgb(21 128 61)" order={2}>
+                      <Highlight colour="rgb(249 115 22)" order={2}>
                         {role.company.name}
                       </Highlight>
                     </Link>

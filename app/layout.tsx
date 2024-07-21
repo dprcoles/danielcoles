@@ -2,7 +2,7 @@ import "./styles/globals.css"
 
 import classNames from "classnames"
 import { Metadata } from "next"
-import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google"
+import { IBM_Plex_Mono, Karla, Space_Grotesk } from "next/font/google"
 import Script from "next/script"
 import React from "react"
 
@@ -12,7 +12,7 @@ import { getCurrentlyPlaying } from "@/lib/spotify"
 
 import { Providers } from "./providers"
 
-const baseFont = Inter({
+const baseFont = Karla({
   subsets: ["latin"],
   variable: "--font-family-base",
 })
@@ -97,6 +97,22 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={"text-white bg-zinc-900"}>
         <Providers>
           <main className="mx-auto min-h-screen flex flex-col selection:text-zinc-900 selection:bg-violet-500">
+            <svg
+              className="pointer-events-none fixed isolate z-30 opacity-50 mix-blend-soft-light"
+              width="100%"
+              height="100%"
+            >
+              <filter id="displacementFilter">
+                <feTurbulence
+                  type="turbulence"
+                  baseFrequency="0.7"
+                  numOctaves="3"
+                  result="turbulence"
+                  stitchTiles="stitch"
+                />
+              </filter>
+              <rect width="100%" height="100%" filter="url(#displacementFilter)"></rect>
+            </svg>
             <NavBlock currentlyPlaying={currentlyPlaying} />
             <div className="max-w-full lg:max-w-4xl mx-auto mt-8 antialiased px-4 pb-16">
               <div className="py-2 min-h-screen">{children}</div>
